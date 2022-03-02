@@ -75,5 +75,5 @@ Follow this [page](https://code.visualstudio.com/docs/editor/userdefinedsnippets
 
 ## Roadmap
 
-[] Add Snippets for more languages
-[] Cover more Appwrite APIs and convert them to snippets
+[ ] Add Snippets for more languages
+[ ] Cover more Appwrite APIs and convert them to snippets
