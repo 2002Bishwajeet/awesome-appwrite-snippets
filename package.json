@@ -3,12 +3,29 @@
   "displayName": "Awesome Appwrite Snippets",
   "description": "Awesome Appwrite Snippets is a collection snippets and shortcuts of commonly used Appwrite APIs ",
   "version": "0.0.1",
+  "icon": "logo.png",
+  "publisher": "Bishwajeet Parhi",
   "engines": {
     "vscode": "^1.64.0"
   },
+  "keywords": [
+    "Flutter",
+    "Dart",
+    "Snippets",
+    "Appwrite"
+  ],
   "categories": [
     "Snippets"
   ],
+  "homepage": "https://github.com/2002Bishwajeet/awesome-appwrite-snippets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/2002Bishwajeet/awesome-appwrite-snippets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/2002Bishwajeet/awesome-appwrite-snippets/issues",
+    "email": "bishwajeet.techmaster@gmail.com"
+  },
   "contributes": {
     "snippets": [
       {
