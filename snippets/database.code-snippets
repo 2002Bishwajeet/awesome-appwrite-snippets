@@ -1,0 +1,44 @@
+{
+  "Initialize Document": {
+    "scope": "dart",
+    "prefix": ["document"],
+    "body": ["final Document document = Document(client);"],
+    "description": "Create a Document object and initialize it."
+  },
+
+  "Create Document": {
+    "scope": "dart",
+    "prefix": ["createDocument", "crDocument"],
+    "body": [
+      "final response = await document.createDocument(collection: '$1', documentId: '$2');"
+    ],
+    "description": "Create a new Document. Before using this route, you should create a new collection resource using either a server integration API or directly from your database console."
+  },
+
+  "List Document": {
+    "scope": "dart",
+    "prefix": ["listDocument", "listDocuments"],
+    "body": [
+      "final response = await document.listDocuments(collectionId: '$1');"
+    ],
+    "description": "Get a list of all the user documents. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's documents."
+  },
+
+  "Update Document": {
+    "scope": "dart",
+    "prefix": ["updateDocument"],
+    "body": [
+      "final response = await document.updateDocument(collectionId: '$1',documentId: `$2`, data: {$3});"
+    ],
+    "description": "Update a document by its unique ID. Using the patch method you can pass only specific fields that will get updated."
+  },
+
+  "Delete Document": {
+    "scope": "dart",
+    "prefix": ["deleteDocument"],
+    "body": [
+      "await document.deleteDocument(collectionId: '$1', documentId: '$2');"
+    ],
+    "description": "Delete a document by its unique ID. This endpoint deletes only the parent documents, its attributes and relations to other documents. Child documents will not be deleted."
+  }
+}

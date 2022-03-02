@@ -1,0 +1,68 @@
+{
+  "Initialize Storage": {
+    "scope": "dart",
+    "prefix": ["storage"],
+    "body": ["final Storage storage = Storage(client);"],
+    "description": "Create a Storage object and initialize it."
+  },
+
+  "Create File": {
+    "scope": "dart",
+    "prefix": "createFile",
+    "body": [
+      "final response = await storage.createFile(fileId: '$1', file: await MultipartFile.fromPath('$2','$3');"
+    ],
+    "description": "Create a new file. The user who creates the file will automatically be assigned to read and write access unless he has passed custom values for read and write arguments."
+  },
+
+  "List Files": {
+    "scope": "dart",
+    "prefix": "listFiles",
+    "body": ["final response = await storage.listFiles();"],
+    "description": "Get a list of all the user files. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's files."
+  },
+
+  "Get File": {
+    "scope": "dart",
+    "prefix": "getFile",
+    "body": ["final response = await storage.getFile(fileId: '$1');"],
+    "description": "Get a file by its unique ID."
+  },
+
+  "Get File Preview": {
+    "scope": "dart",
+    "prefix": "getFilePreview",
+    "body": ["final response = await storage.getFilePreview(fileId: '$1');"],
+    "description": "Get a file preview by its unique ID."
+  },
+
+  "Get File for Download": {
+    "scope": "dart",
+    "prefix": "getFileForDownload",
+    "body": ["final response = await storage.getFileDownload(fileId: '$1');"],
+    "description": "Get a file for download by its unique ID."
+  },
+
+  "Get File for View": {
+    "scope": "dart",
+    "prefix": "getFileForView",
+    "body": ["final response = await storage.getFileView(fileId: '$1');"],
+    "description": "Get a file content by its unique ID. This endpoint is similar to the download method but returns with no 'Content-Disposition: attachment' header."
+  },
+
+  "Update File": {
+    "scope": "dart",
+    "prefix": "updateFile",
+    "body": [
+      "final response = await storage.updateFile(fileId: '$1', read: [$2],write:[]);"
+    ],
+    "description": "Update a file by its unique ID. Only users with write permissions have access to update this resource."
+  },
+
+  "Delete File": {
+    "scope": "dart",
+    "prefix": "deleteFile",
+    "body": ["await storage.deleteFile(fileId: '$1');"],
+    "description": "Delete a file by its unique ID. Only users with write permissions have access to delete this resource."
+  }
+}

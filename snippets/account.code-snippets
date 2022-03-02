@@ -1,0 +1,196 @@
+{
+  "Initialize account": {
+    "scope": "dart",
+    "prefix": ["account"],
+    "body": ["final Account account = Account(client);"],
+    "description": "Create a Account object and initialize it."
+  },
+
+  "Create account": {
+    "scope": "dart",
+    "prefix": ["crAccount", "createAccount"],
+    "body": [
+      "final User user = await account.create(userId: '$1', email: '$2', password: '$3');"
+    ],
+    "description": "Create a new Account"
+  },
+
+  "Create account Session": {
+    "scope": "dart",
+    "prefix": [
+      "crsAccount",
+      "createAccountSession",
+      "createSession",
+      "crsession"
+    ],
+    "body": [
+      "final Session session = await account.createSession( email: '$1', password: '$2');"
+    ],
+    "description": "Create a new Account Session"
+  },
+
+  "Create account Session with OAuth2": {
+    "scope": "dart",
+    "prefix": ["crsessionOAuth2"],
+    "body": [
+      "final response = await account.createOAuth2Session(provider: '$1');"
+    ],
+    "description": "Create a new Account Session with OAuth2"
+  },
+
+  "Create Magic Url session": {
+    "scope": "dart",
+    "prefix": [
+      "crsAccount",
+      "createSessionAccount",
+      "magicUrl",
+      "mgURLSession"
+    ],
+    "body": [
+      "final response = await account.createMagicURLSession(userId: '$1', email: '$2');"
+    ],
+    "description": "Create a new account session with Magic Url"
+  },
+  "Update Magic Url session": {
+    "scope": "dart",
+    "prefix": ["upMagicUrl", "updatemagicUrl", "mgURLSession"],
+    "body": [
+      "final response = await account.updateMagicURLSession(userId: '$1', secret: '$2');"
+    ],
+    "description": "Update Magic URL session"
+  },
+
+  "Create Anonymous session": {
+    "scope": "dart",
+    "prefix": ["crsAccount", "crAnonymous", "createAnonymousSession"],
+    "body": ["final response = await account.createAnonymousSession();"],
+    "description": "Create a new Anonymous Session"
+  },
+
+  "Create JWT": {
+    "scope": "dart",
+    "prefix": ["crJWT", "JWT"],
+    "body": ["final response = await account.createJWT();"],
+    "description": "Create a new Account using JWT"
+  },
+
+  "Get Account": {
+    "scope": "dart",
+    "prefix": ["getAccount"],
+    "body": ["final User? user = await account.get();"],
+    "description": "Get currently logged in user data as JSON object."
+  },
+
+  "Get Account Preferences": {
+    "scope": "dart",
+    "prefix": ["getAccountPreferences", "getAccPrefs"],
+    "body": ["final response = await account.getPrefs();"],
+    "description": "Get currently logged in user preferences as a key-value object."
+  },
+
+  "Get Account Sessions": {
+    "scope": "dart",
+    "prefix": ["getAccountSession", "getAccSession"],
+    "body": ["final response = await account.getSessions();"],
+    "description": "Get currently logged in user list of active sessions across different devices."
+  },
+
+  "Get Account Logs": {
+    "scope": "dart",
+    "prefix": ["getAccountLogs", "getAccLog"],
+    "body": ["final response = await account.getLogs();"],
+    "description": "Get currently logged in user list of latest security activity logs. Each log returns user IP address, location and date and time of log."
+  },
+
+  "Get Session by ID": {
+    "scope": "dart",
+    "prefix": ["getSessionId", "getSessionbyId"],
+    "body": ["final response = await account.getSesssion(sessionId: '$1');"],
+    "description": "Use this endpoint to get a logged in user's session using a Session ID. Inputting 'current' will return the current session being used."
+  },
+
+  "Update Account Name": {
+    "scope": "dart",
+    "prefix": ["updateName", "upName"],
+    "body": ["final response = await account.updateName(name: '$1');"],
+    "description": "Update currently logged in user account name."
+  },
+
+  "Update Account Password": {
+    "scope": "dart",
+    "prefix": ["updatePassword", "upPass"],
+    "body": ["final response = await account.updatePassword(password: '$1');"],
+    "description": "Update currently logged in user password. For validation, user is required to pass in the new password, and the old password. For users created with OAuth and Team Invites, oldPassword is optional."
+  },
+
+  "Update Account Email": {
+    "scope": "dart",
+    "prefix": ["updateEmail", "upEmail"],
+    "body": [
+      "final response = await account.updateEnail(email: '$1', password: '$2');"
+    ],
+    "description": "Update currently logged in user password. For validation, user is required to pass in the new password, and the old password. For users created with OAuth and Team Invites, oldPassword is optional."
+  },
+
+  "Update Account Preferences": {
+    "scope": "dart",
+    "prefix": ["updatePreferences", "upPrefs", "upPref", "upPreferences"],
+    "body": ["final response = await account.updatePrefs(prefs: {$1});"],
+    "description": "Update currently logged in user account preferences. The object you pass is stored as is, and replaces any previous value. The maximum allowed prefs size is 64kB and throws error if exceeded."
+  },
+
+  "Delete Account": {
+    "scope": "dart",
+    "prefix": ["deleteAccount", "delAcc"],
+    "body": ["await account.delete();"],
+    "description": "Delete a currently logged in user account. Behind the scene, the user record is not deleted but permanently blocked from any access. This is done to avoid deleted accounts being overtaken by new users with the same email address. Any user-related resources like documents or storage files should be deleted separately."
+  },
+
+  "Delete Account Session": {
+    "scope": "dart",
+    "prefix": ["deleteAccountSession", "delAccSession"],
+    "body": ["await account.deleteSession(sessionId: '$1');"],
+    "description": "Use this endpoint to log out the currently logged in user from all their account sessions across all of their different devices. When using the option id argument, only the session unique ID provider will be deleted."
+  },
+
+  "Delete All Account Sessions": {
+    "scope": "dart",
+    "prefix": ["deleteAccountSessions", "delAccSessions"],
+    "body": ["await account.deleteSessions();"],
+    "description": "Delete all sessions from the user account and remove any sessions cookies from the end client."
+  },
+
+  "Create Password Recovery": {
+    "scope": "dart",
+    "prefix": ["recPassword", "crRecovery"],
+    "body": [
+      "final response = await account.createRecovery(email: '$1', url:'$2');"
+    ],
+    "description": "Sends the user an email with a temporary secret key for password reset. When the user clicks the confirmation link he is redirected back to your app password reset URL with the secret key and email address values attached to the URL query string. Use the query string params to submit a request to the PUT /account/recovery endpoint to complete the process. The verification link sent to the user's email address is valid for 1 hour."
+  },
+
+  "Create Password Recovery(confirmation)": {
+    "scope": "dart",
+    "prefix": ["upRecovery", "updateRecovery"],
+    "body": [
+      "final response = await account.updateRecovery(userId: '$1', secret:'$2',password: '$3',passwordAgain:'$4');"
+    ],
+    "description": "Sends the user an email with a temporary secret key for password reset. When the user clicks the confirmation link he is redirected back to your app password reset URL with the secret key and email address values attached to the URL query string. Use the query string params to submit a request to the PUT /account/recovery endpoint to complete the process. The verification link sent to the user's email address is valid for 1 hour."
+  },
+
+  "Create Email Verification": {
+    "scope": "dart",
+    "prefix": ["emailVerification", "crEmailVerification"],
+    "body": ["final response = await account.createVerification(url: '$1');"],
+    "description": "Use this endpoint to send a verification message to your user email address to confirm they are the valid owners of that address. Both the userId and secret arguments will be passed as query parameters to the URL you have provided to be attached to the verification email. The provided URL should redirect the user back to your app and allow you to complete the verification process by verifying both the userId and secret parameters. Learn more about how to complete the verification process. The verification link sent to the user's email address is valid for 7 days."
+  },
+
+  "Create Email Verification(confirmation)": {
+    "scope": "dart",
+    "prefix": ["emailVerificationconfirmation", "crEmailVerificationconfirm"],
+    "body": [
+      "final response = await account.updateVerification(userId: '$1',secret: '$2');"
+    ],
+    "description": "Use this endpoint to send a verification message to your user email address to confirm they are the valid owners of that address. Both the userId and secret arguments will be passed as query parameters to the URL you have provided to be attached to the verification email. The provided URL should redirect the user back to your app and allow you to complete the verification process by verifying both the userId and secret parameters. Learn more about how to complete the verification process. The verification link sent to the user's email address is valid for 7 days."
+  }
+}

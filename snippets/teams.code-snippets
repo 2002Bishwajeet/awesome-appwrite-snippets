@@ -1,0 +1,85 @@
+{
+  "Initialize Team": {
+    "scope": "dart",
+    "prefix": ["team"],
+    "body": ["final Team team = Team(client);"],
+    "description": "Create a Team object and initialize it."
+  },
+
+  "Create Team": {
+    "scope": "dart",
+    "prefix": ["createTeam", "crTeam"],
+    "body": ["final response = await team.create(teamId: '$1' ,name: '$2');"],
+    "description": "Create a new Team."
+  },
+
+  "List Teams": {
+    "scope": "dart",
+    "prefix": ["listTeams", "listTeams"],
+    "body": ["final response = await team.list();"],
+    "description": "Get a list of all the user teams. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's teams."
+  },
+
+  "Get Team": {
+    "scope": "dart",
+    "prefix": ["getTeam", "getTeam"],
+    "body": ["final response = await team.get(teamId: '$1');"],
+    "description": "Get a team by its unique ID."
+  },
+
+  "Update Team": {
+    "scope": "dart",
+    "prefix": ["updateTeam", "updateTeam"],
+    "body": ["final response = await team.update(teamId: '$1', name: '$2');"],
+    "description": "Update a team by its unique ID."
+  },
+
+  "Delete Team": {
+    "scope": "dart",
+    "prefix": ["deleteTeam", "deleteTeam"],
+    "body": ["await team.delete(teamId: '$1');"],
+    "description": "Delete a team by its unique ID."
+  },
+
+  "Create Team Membership": {
+    "scope": "dart",
+    "prefix": ["createTeamMembership", "crTeamMembership"],
+    "body": [
+      "final response = await team.createMembership(teamId: '$1', email: '$2',roles: [$3], url: '$4');"
+    ],
+    "description": "Create a new Team Membership."
+  },
+
+  "Get Team Membership": {
+    "scope": "dart",
+    "prefix": ["getTeamMembership", "getTeamMembership"],
+    "body": ["final response = await team.getMembership(teamId: '$1');"],
+    "description": "Get a team membership by its unique ID."
+  },
+
+  "Update Team Membership Roles": {
+    "scope": "dart",
+    "prefix": ["updateTeamMembershiproles"],
+    "body": [
+      "final response = await team.updateMembershipRoles(teamId: '$1', membershipId: '$2',roles: [$3]);"
+    ],
+    "description": "Update a team membership by its unique ID."
+  },
+
+  "Update Team Membership status": {
+    "scope": "dart",
+    "prefix": ["updateTeamMembershipstatus"],
+    "body": [
+      "final response = await team.updateMembershipStatus(teamId: '$1', membershipId: '$2', userId: '$3', secret: '$4');"
+    ],
+    "description": "Update a team membership by its unique ID."
+  },
+
+  "Delete Team Membership" : {
+    "scope": "dart",
+    "prefix": ["deleteTeamMembership", "deleteTeamMembership"],
+    "body": ["await team.deleteMembership(teamId: '$1', membershipId: '$2');"],
+    "description": "Delete a team membership by its unique ID."
+  },
+  
+}

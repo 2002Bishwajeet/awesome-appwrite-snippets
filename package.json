@@ -1,0 +1,36 @@
+{
+  "name": "awesome-appwrite-snippets",
+  "displayName": "Awesome Appwrite Snippets",
+  "description": "Awesome Appwrite Snippets is a collection snippets and shortcuts of commonly used Appwrite APIs ",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.64.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "dart",
+        "path": "./snippets/client.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./snippets/account.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./snippets/database.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./snippets/storage.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./snippets/teams.code-snippets"
+      }
+    ]
+  }
+}
