@@ -26,6 +26,9 @@
     "url": "https://github.com/2002Bishwajeet/awesome-appwrite-snippets/issues",
     "email": "bishwajeet.techmaster@gmail.com"
   },
+  "scripts": {
+  "deploy": "vsce publish --yarn"
+},
   "contributes": {
     "snippets": [
       {
