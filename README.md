@@ -61,7 +61,7 @@ The commit naming follows [this structure](https://cbea.ms/git-commit/)
 1. Create a new file in the `snippets` directory of the format `<name>.code-snippets`. If the name convention exists already, just add them in that file.
 2. To add a new snippet, replace the following skeletion code.
 
-```json
+```jsonc
 
     "snippetName": {
         "scope" : "<lang>", // Add the language scope here. For e.g `dart`
@@ -75,5 +75,6 @@ Follow this [page](https://code.visualstudio.com/docs/editor/userdefinedsnippets
 
 ## Roadmap
 
-[ ] Add Snippets for more languages
-[ ] Cover more Appwrite APIs and convert them to snippets
+- [ ] Add Snippets for more languages
+
+- [ ] Cover more Appwrite APIs and convert them to snippets
