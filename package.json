@@ -57,5 +57,8 @@
   },
   "sponsor": {
     "url": "https://github.com/sponsors/2002bishwajeet"
+  },
+  "devDependencies": {
+    "vsce": "^2.9.2"
   }
 }
