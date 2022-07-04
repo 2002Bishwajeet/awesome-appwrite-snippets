@@ -15,7 +15,7 @@
     "description": "Create a new Account"
   },
 
-  "Create account Session": {
+  "Create account Session with Email": {
     "scope": "dart",
     "prefix": [
       "crsAccount",
@@ -24,7 +24,7 @@
       "crsession"
     ],
     "body": [
-      "final Session session = await account.createSession( email: '$1', password: '$2');"
+      "final Session session = await account.createEmailSession( email: '$1', password: '$2');"
     ],
     "description": "Create a new Account Session"
   },
@@ -58,6 +58,24 @@
       "final response = await account.updateMagicURLSession(userId: '$1', secret: '$2');"
     ],
     "description": "Update Magic URL session"
+  },
+
+  "Create Phone session": {
+    "scope": "dart",
+    "prefix": ["crsPhone", "createPhoneSession"],
+    "body": [
+      "final response = await account.createPhoneSession(userId: '$1', number: '$2');"
+    ],
+    "description": "Create a new Phone session"
+  },
+
+  "Update Phone session": {
+    "scope": "dart",
+    "prefix": ["upPhone", "updatePhoneSession"],
+    "body": [
+      "final response = await account.updatePhoneSession(userId: '$1', number: '$2');"
+    ],
+    "description": "Create a new Phone session"
   },
 
   "Create Anonymous session": {
@@ -192,5 +210,21 @@
       "final response = await account.updateVerification(userId: '$1',secret: '$2');"
     ],
     "description": "Use this endpoint to send a verification message to your user email address to confirm they are the valid owners of that address. Both the userId and secret arguments will be passed as query parameters to the URL you have provided to be attached to the verification email. The provided URL should redirect the user back to your app and allow you to complete the verification process by verifying both the userId and secret parameters. Learn more about how to complete the verification process. The verification link sent to the user's email address is valid for 7 days."
+  },
+
+   "Create Phone Verification": {
+    "scope": "dart",
+    "prefix": ["phoneVerification", "crPhoneVerification"],
+    "body": ["final response = await account.createPhoneVerification();"],
+    "description": "Use this endpoint to send a verification SMS to the currently logged in user. This endpoint is meant for use after updating a user's phone number using the accountUpdatePhone endpoint. Learn more about how to complete the verification process. The verification code sent to the user's phone number is valid for 15 minutes."
+  },
+
+  "Create Phone Verification(confirmation)": {
+    "scope": "dart",
+    "prefix": ["phoneVerificationconfirmation", "crPhoneVerificationconfirm"],
+    "body": [
+      "final response = await account.updatePhoneVerification(userId: '$1',secret: '$2');"
+    ],
+    "description": "Use this endpoint to complete the user phone verification process. Use the userId and secret that were sent to your user's phone number to verify the user email ownership. If confirmed this route will return a 200 status code."
   }
 }
