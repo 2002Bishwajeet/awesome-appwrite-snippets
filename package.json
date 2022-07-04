@@ -32,23 +32,23 @@
     "snippets": [
       {
         "language": "dart",
-        "path": "./snippets/client.code-snippets"
+        "path": "./snippets/dart/client.code-snippets"
       },
       {
         "language": "dart",
-        "path": "./snippets/account.code-snippets"
+        "path": "./snippets/dart/account.code-snippets"
       },
       {
         "language": "dart",
-        "path": "./snippets/database.code-snippets"
+        "path": "./snippets/dart/database.code-snippets"
       },
       {
         "language": "dart",
-        "path": "./snippets/storage.code-snippets"
+        "path": "./snippets/dart/storage.code-snippets"
       },
       {
         "language": "dart",
-        "path": "./snippets/teams.code-snippets"
+        "path": "./snippets/dart/teams.code-snippets"
       }
     ]
   },
@@ -60,5 +60,6 @@
   },
   "devDependencies": {
     "vsce": "^2.9.2"
-  }
+  },
+  "license": "MIT"
 }

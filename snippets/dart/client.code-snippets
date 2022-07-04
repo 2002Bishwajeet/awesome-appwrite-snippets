@@ -1,4 +1,7 @@
 {
+
+/* -----------------------FLUTTER----------------------- */
+
   "Add a Client": {
     "scope": "dart",
     "prefix": "client",
@@ -11,6 +14,8 @@
     "description": "Create a Client object and initialize it."
   },
 
+/* -----------------------DART----------------------- */
+
   "Add a Dart Client": {
     "scope": "dart",
     "prefix": "dartclient",
@@ -21,5 +26,5 @@
       "\t.setJWT('$3');"
     ],
     "description": "Create a dart Client object and initialize it."
-  }
+  },
 }
