@@ -2,7 +2,7 @@
 
 Awesome Appwrite Snippets is a collection of commonly used Appwrite APIs. It increases your speed of development by eliminating most of the boilerplate code associated with making using Appwrite in your Project.
 
-![example](https://github.com/2002Bishwajeet/awesome-appwrite-snippets/blob/7477e42f2a7a53840863d0779b2b3270720d139e/.github/images/appwrite.gif)
+![example](.github/images/appwrite.gif)
 
 ## Features
 
@@ -56,7 +56,7 @@ git push origin <new-branch-name>
 
 The commit naming follows [this structure](https://cbea.ms/git-commit/)
 
-###To add new snippets
+### To add new snippets
 
 1. Create a new file in the `snippets` directory of the format `<name>.code-snippets`. If the name convention exists already, just add them in that file.
 2. To add a new snippet, replace the following skeletion code.

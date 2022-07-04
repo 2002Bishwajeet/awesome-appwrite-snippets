@@ -26,8 +26,8 @@
     "email": "bishwajeet.techmaster@gmail.com"
   },
   "scripts": {
-  "deploy": "vsce publish --yarn"
-},
+    "deploy": "vsce publish --yarn"
+  },
   "contributes": {
     "snippets": [
       {
@@ -51,5 +51,11 @@
         "path": "./snippets/teams.code-snippets"
       }
     ]
+  },
+  "dependencies": {
+    "xvfb": "^0.4.0"
+  },
+  "sponsor": {
+    "url": "https://github.com/sponsors/2002bishwajeet"
   }
 }
