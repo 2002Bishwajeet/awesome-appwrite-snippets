@@ -35,8 +35,16 @@
         "path": "./snippets/dart/client.code-snippets"
       },
       {
+        "language": "javascript",
+        "path": "./snippets/javascript/client.code-snippets"
+      },
+      {
         "language": "dart",
         "path": "./snippets/dart/account.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript/account.code-snippets"
       },
       {
         "language": "dart",

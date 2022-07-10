@@ -1,0 +1,10 @@
+{
+     "Add a Client" : {
+    "scope": "javascript",
+    "prefix": "client",
+    "body": [
+      "const client = new Client();",
+    ],
+    "description": "Create a  Client object and initialize it."
+  }  
+}
