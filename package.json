@@ -51,6 +51,10 @@
         "path": "./snippets/dart/database.code-snippets"
       },
       {
+        "language": "javascript",
+        "path": "./snippets/javascript/database.code-snippets"
+      },
+      {
         "language": "dart",
         "path": "./snippets/dart/storage.code-snippets"
       },
