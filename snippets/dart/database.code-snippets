@@ -12,7 +12,7 @@
     "scope": "dart",
     "prefix": ["createDocument", "crDocument"],
     "body": [
-      "final response = await database.createDocument(databaseId: \"${1:databaseId}\"' collectionId: \"${2:collectionId}\", documentId: \"${3:documentId}\");"
+      "final response = await database.createDocument(collectionId: \"${1:collectionId}\", documentId: \"${2:documentId}\");"
     ],
     "description": "Create a new Document. Before using this route, you should create a new collection resource using either a server integration API or directly from your database console."
   },
@@ -21,7 +21,7 @@
     "scope": "dart",
     "prefix": ["listDocument", "listDocuments"],
     "body": [
-      "final response = await database.listDocuments(databaseId: \"${1:databaseId}\"' collectionId: \"${2:collectionId}\",);"
+      "final response = await database.listDocuments(collectionId: \"${1:collectionId}\",);"
     ],
     "description": "Get a list of all the user documents. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's documents."
   },
@@ -30,7 +30,7 @@
     "scope": "dart",
     "prefix": "getDocument",
     "body": [
-      "final response = await database.getDocument(databaseId: \"${1:databaseId}\"' collectionId: \"${2:collectionId}\", documentId: \"${3:documentId}\");"
+      "final response = await database.getDocument(collectionId: \"${1:collectionId}\", documentId: \"${2:documentId}\");"
     ],
     "description": "Get a document by its unique ID. This endpoint response returns a JSON object with the document data."
   },
@@ -39,7 +39,7 @@
     "scope": "dart",
     "prefix": ["updateDocument"],
     "body": [
-      "final response = await database.updateDocument(collectionId: '$1',documentId: `$2`, data: {$3});"
+      "final response = await database.updateDocument(collectionId: \"${1:collectionId}\", documentId: \"${2:documentId}\", data: {$3});"
     ],
     "description": "Update a document by its unique ID. Using the patch method you can pass only specific fields that will get updated."
   },
