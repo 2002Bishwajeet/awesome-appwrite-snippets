@@ -1,0 +1,92 @@
+{
+  "Initialize Team": {
+    "scope": "javascript",
+    "prefix": ["team"],
+    "body": ["const Team team = Team(client);"],
+    "description": "Create a Team object and initialize it."
+  },
+
+  "Create Team": {
+    "scope": "javascript",
+    "prefix": ["createTeam", "crTeam"],
+    "body": [
+      "const response = await team.create(\"${1:teamId}\",\"${2:name}\");"
+    ],
+    "description": "Create a new Team."
+  },
+
+  "List Teams": {
+    "scope": "javascript",
+    "prefix": ["listTeams", "listTeams"],
+    "body": ["const response = await team.list();"],
+    "description": "Get a list of all the user teams. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's teams."
+  },
+
+  "Get Team": {
+    "scope": "javascript",
+    "prefix": ["getTeam", "getTeam"],
+    "body": ["const response = await team.get(\"${1:teamId}\");"],
+    "description": "Get a team by its unique ID."
+  },
+
+  "Update Team": {
+    "scope": "javascript",
+    "prefix": ["updateTeam", "updateTeam"],
+    "body": [
+      "const response = await team.update(\"${1:teamId}\",\"${2:name}\");"
+    ],
+    "description": "Update a team by its unique ID."
+  },
+
+  "Delete Team": {
+    "scope": "javascript",
+    "prefix": ["deleteTeam", "deleteTeam"],
+    "body": ["await team.delete(\"${1:teamId}\");"],
+    "description": "Delete a team by its unique ID."
+  },
+
+  "Create Team Membership": {
+    "scope": "javascript",
+    "prefix": ["createTeamMembership", "crTeamMembership"],
+    "body": [
+      "const response = await team.createMembership(\"${1:teamId}\",\"${2:email}\",[$3],\"${4:url}\");"
+    ],
+    "description": "Create a new Team Membership."
+  },
+
+  "Get Team Membership": {
+    "scope": "javascript",
+    "prefix": ["getTeamMembership", "getTeamMembership"],
+    "body": [
+      "const response = await team.getMembership(\"${1:teamId}\");"
+    ],
+    "description": "Get a team membership by its unique ID."
+  },
+
+  "Update Team Membership Roles": {
+    "scope": "javascript",
+    "prefix": ["updateTeamMembershiproles"],
+    "body": [
+      "const response = await team.updateMembershipRoles(\"${1:teamId}\",\"${2:membershipId}\",[$3]);"
+    ],
+    "description": "Update a team membership by its unique ID."
+  },
+
+  "Update Team Membership status": {
+    "scope": "javascript",
+    "prefix": ["updateTeamMembershipstatus"],
+    "body": [
+      "const response = await team.updateMembershipStatus(\"${1:teamId}\",\"${2:membershipId}\",\"${3:userId}\",\"${5:secret}\");"
+    ],
+    "description": "Update a team membership by its unique ID."
+  },
+
+  "Delete Team Membership": {
+    "scope": "javascript",
+    "prefix": ["deleteTeamMembership", "deleteTeamMembership"],
+    "body": [
+      "await team.deleteMembership(\"${1:teamId}\",\"${2:membershipId}\");"
+    ],
+    "description": "Delete a team membership by its unique ID."
+  }
+}

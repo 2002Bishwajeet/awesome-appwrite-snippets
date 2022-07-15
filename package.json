@@ -32,23 +32,43 @@
     "snippets": [
       {
         "language": "dart",
+        "path": "./snippets/flutter/client.code-snippets"
+      },
+      {
+        "language": "dart",
         "path": "./snippets/dart/client.code-snippets"
       },
       {
-        "language": "dart",
-        "path": "./snippets/dart/account.code-snippets"
+        "language": "javascript",
+        "path": "./snippets/web/client.code-snippets"
       },
       {
         "language": "dart",
-        "path": "./snippets/dart/database.code-snippets"
+        "path": "./snippets/flutter/account.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/web/account.code-snippets"
       },
       {
         "language": "dart",
-        "path": "./snippets/dart/storage.code-snippets"
+        "path": "./snippets/flutter/database.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/web/database.code-snippets"
       },
       {
         "language": "dart",
-        "path": "./snippets/dart/teams.code-snippets"
+        "path": "./snippets/flutter/storage.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/web/storage.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./snippets/flutter/teams.code-snippets"
       }
     ]
   },

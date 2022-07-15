@@ -1,21 +1,5 @@
 {
 
-/* -----------------------FLUTTER----------------------- */
-
-  "Add a Client": {
-    "scope": "dart",
-    "prefix": "client",
-    "body": [
-      "final Client client = Client()",
-      "\t.setEndpoint('$1')",
-      "\t.setProject('$2')",
-      "\t.setSelfSigned(status:$3);"
-    ],
-    "description": "Create a Client object and initialize it."
-  },
-
-/* -----------------------DART----------------------- */
-
   "Add a Dart Client": {
     "scope": "dart",
     "prefix": "dartclient",

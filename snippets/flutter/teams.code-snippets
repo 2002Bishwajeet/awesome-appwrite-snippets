@@ -9,7 +9,9 @@
   "Create Team": {
     "scope": "dart",
     "prefix": ["createTeam", "crTeam"],
-    "body": ["final response = await team.create(teamId: '$1' ,name: '$2');"],
+    "body": [
+      "final response = await team.create(teamId: \"${1:teamId}\" ,name: \"${2:name}\");"
+    ],
     "description": "Create a new Team."
   },
 
@@ -23,21 +25,23 @@
   "Get Team": {
     "scope": "dart",
     "prefix": ["getTeam", "getTeam"],
-    "body": ["final response = await team.get(teamId: '$1');"],
+    "body": ["final response = await team.get(teamId: \"${1:teamId}\");"],
     "description": "Get a team by its unique ID."
   },
 
   "Update Team": {
     "scope": "dart",
     "prefix": ["updateTeam", "updateTeam"],
-    "body": ["final response = await team.update(teamId: '$1', name: '$2');"],
+    "body": [
+      "final response = await team.update(teamId: \"${1:teamId}\", name: \"${2:name}\");"
+    ],
     "description": "Update a team by its unique ID."
   },
 
   "Delete Team": {
     "scope": "dart",
     "prefix": ["deleteTeam", "deleteTeam"],
-    "body": ["await team.delete(teamId: '$1');"],
+    "body": ["await team.delete(teamId: \"${1:teamId}\");"],
     "description": "Delete a team by its unique ID."
   },
 
@@ -45,7 +49,7 @@
     "scope": "dart",
     "prefix": ["createTeamMembership", "crTeamMembership"],
     "body": [
-      "final response = await team.createMembership(teamId: '$1', email: '$2',roles: [$3], url: '$4');"
+      "final response = await team.createMembership(teamId: \"${1:teamId}\", email: \"${2:email}\",roles: [$3], url: \"${4:url}\");"
     ],
     "description": "Create a new Team Membership."
   },
@@ -53,7 +57,9 @@
   "Get Team Membership": {
     "scope": "dart",
     "prefix": ["getTeamMembership", "getTeamMembership"],
-    "body": ["final response = await team.getMembership(teamId: '$1');"],
+    "body": [
+      "final response = await team.getMembership(teamId: \"${1:teamId}\");"
+    ],
     "description": "Get a team membership by its unique ID."
   },
 
@@ -61,7 +67,7 @@
     "scope": "dart",
     "prefix": ["updateTeamMembershiproles"],
     "body": [
-      "final response = await team.updateMembershipRoles(teamId: '$1', membershipId: '$2',roles: [$3]);"
+      "final response = await team.updateMembershipRoles(teamId: \"${1:teamId}\", membershipId: \"${2:membershipId}\",roles: [$3]);"
     ],
     "description": "Update a team membership by its unique ID."
   },
@@ -70,16 +76,17 @@
     "scope": "dart",
     "prefix": ["updateTeamMembershipstatus"],
     "body": [
-      "final response = await team.updateMembershipStatus(teamId: '$1', membershipId: '$2', userId: '$3', secret: '$4');"
+      "final response = await team.updateMembershipStatus(teamId: \"${1:teamId}\", membershipId: \"${2:membershipId}\", userId: \"${3:userId}\", secret: \"${5:secret}\");"
     ],
     "description": "Update a team membership by its unique ID."
   },
 
-  "Delete Team Membership" : {
+  "Delete Team Membership": {
     "scope": "dart",
     "prefix": ["deleteTeamMembership", "deleteTeamMembership"],
-    "body": ["await team.deleteMembership(teamId: '$1', membershipId: '$2');"],
+    "body": [
+      "await team.deleteMembership(teamId: \"${1:teamId}\", membershipId: \"${2:membershipId}\");"
+    ],
     "description": "Delete a team membership by its unique ID."
-  },
-  
+  }
 }
