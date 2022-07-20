@@ -1,8 +1,10 @@
-# Awesome Appwrite Snippets
+# Awesome Appwrite Snippets [![Awesome](.github/images/awesome-badge.png)](https://github.com/sindresorhus/awesome)
 
 Awesome Appwrite Snippets is a collection of commonly used Appwrite APIs. It increases your speed of development by eliminating most of the boilerplate code associated with making using Appwrite in your Project.
 
-![example](.github/images/appwrite.gif)
+![Appwrite Logo](.github/images/awesone-appwrite-snippets-banner.png)
+
+<!-- ![example](.github/images/appwrite.gif) -->
 
 ## Features
 
