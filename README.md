@@ -25,8 +25,6 @@ Awesome Appwrite Snippets is a collection of commonly used Appwrite APIs. It inc
 Appwrite is a self-hosted backend-as-a-service platform that provides developers with all the core APIs required to build any application.
 To know more about appwrite, visit the [official website](https://appwrite.io).
 
-## Why Snippets?
-
 ## Roadmap
 
 The following tables portrays the snippets of the following Appwrite API in their particular language is supported for now.
