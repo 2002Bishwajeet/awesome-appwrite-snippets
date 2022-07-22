@@ -2,7 +2,7 @@
 
   "Add a Dart Client": {
     "scope": "dart",
-    "prefix": "dartclient",
+    "prefix": "sclient",
     "body": [
       "final Client client = Client()",
       "\t.setEndpoint($1)",
