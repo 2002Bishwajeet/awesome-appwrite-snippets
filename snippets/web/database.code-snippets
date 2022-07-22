@@ -10,7 +10,7 @@
 
   "Create Document": {
     "scope": "javascript",
-    "prefix": ["createDocument", "crDocument"],
+    "prefix": ["crdoc", "crDocument"],
     "body": [
       "const response = await database.createDocument(\"${1:collectionId}\", \"${2:documentId}\", {\"${3:data}\"});"
     ],
@@ -19,7 +19,7 @@
 
   "List Document": {
     "scope": "javascript",
-    "prefix": ["listDocument", "listDocuments"],
+    "prefix": ["lsdoc", "lsd"],
     "body": [
       "const response = await database.listDocuments(\"${1:collectionId}\",);"
     ],
@@ -46,7 +46,7 @@
 
   "Delete Document": {
     "scope": "javascript",
-    "prefix": ["deleteDocument"],
+    "prefix": ["deleteDocument","deldoc"],
     "body": [
       "await database.deleteDocument( \"${1:collectionId}\", \"${2:documentId}\");"
     ],
