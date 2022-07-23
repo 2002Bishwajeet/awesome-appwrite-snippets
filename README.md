@@ -2,6 +2,14 @@
 
 Awesome Appwrite Snippets is a collection of commonly used Appwrite APIs. It increases your speed of development by eliminating most of the boilerplate code associated with making using Appwrite in your Project.
 
+<center>
+<a href = "https://github.com/2002Bishwajeet/awesome-appwrite-snippets/issues"><img src = https://img.shields.io/github/issues/2002Bishwajeet/awesome-appwrite-snippets></a>
+<a href = "https://github.com/2002Bishwajeet/awesome-appwrite-snippets/fork"><img src = https://img.shields.io/github/forks/2002Bishwajeet/awesome-appwrite-snippets></a>
+	<a href = "https://github.com/2002Bishwajeet/awesome-appwrite-snippets/stargazers"><img src = https://img.shields.io/github/stars/2002Bishwajeet/awesome-appwrite-snippets></a>
+  <a href = "https://github.com/2002Bishwajeet/awesome-appwrite-snippets/blob/master/LICENSE"><img src = https://img.shields.io/github/license/2002Bishwajeet/awesome-appwrite-snippets></a>
+  </center>
+  
+
 ![Appwrite Logo](.github/images/awesone-appwrite-snippets-banner.png)
 
 ## Index
@@ -56,6 +64,8 @@ The following tables portrays the snippets of the following Appwrite API in thei
 |    Avatars    |      |         |       |      |        |      |     |        |
 |    Health     |      |         |       |      |        |      |     |        |
 |     Users     |      |         |       |      |        |      |     |        |
+
+These snippets supports for the appwrite version ![Appwrite Version](https://img.shields.io/badge/appwrite-v0.15.2-%23f02e65)
 
 ## Rest API Snippets
 
