@@ -10,7 +10,7 @@
 
   "Create Document": {
     "scope": "dart",
-    "prefix": ["createDocument", "crDocument"],
+    "prefix": ["crdoc", "crDocument"],
     "body": [
       "final response = await database.createDocument(collectionId: \"${1:collectionId}\", documentId: \"${2:documentId}\");"
     ],
@@ -19,7 +19,7 @@
 
   "List Document": {
     "scope": "dart",
-    "prefix": ["listDocument", "listDocuments"],
+    "prefix": ["lsdoc", "lsd"],
     "body": [
       "final response = await database.listDocuments(collectionId: \"${1:collectionId}\",);"
     ],
@@ -46,7 +46,7 @@
 
   "Delete Document": {
     "scope": "dart",
-    "prefix": ["deleteDocument"],
+    "prefix": ["deleteDocument", "deldoc"],
     "body": [
       "await database.deleteDocument(collectionId: '$1', documentId: '$2');"
     ],

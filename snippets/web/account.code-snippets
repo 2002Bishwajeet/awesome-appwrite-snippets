@@ -11,17 +11,12 @@
     "body": [
       "const response = await account.create(\"${1:userId}\",\"${2:email}\",\"${3:password}\");"
     ],
-    "description": "Create a new Account"
+    "description": "Allow a new user to register a new account in your project."
   },
 
   "Create account Session with Email": {
     "scope": "javascript",
-    "prefix": [
-      "crsAccount",
-      "createAccountSession",
-      "createSession",
-      "crsession"
-    ],
+    "prefix": ["crsemail", "createEmailSession"],
     "body": [
       "const response = await account.createEmailSession(\"${1:email}\", \"${2:password}\");"
     ],
@@ -39,16 +34,11 @@
 
   "Create Magic Url session": {
     "scope": "javascript",
-    "prefix": [
-      "crsAccount",
-      "createSessionAccount",
-      "magicUrl",
-      "mgURLSession"
-    ],
+    "prefix": ["magicUrl", "mgURLSession"],
     "body": [
       "const response = await account.createMagicURLSession(userId: \"${1:userId}\", email:  \"${1:email}\");"
     ],
-    "description": "Create a new account session with Magic Url"
+    "description": "Sends the user an email with a secret key for creating a session. When the user clicks the link in the email, the user is redirected back to the URL you provided with the secret key and userId values attached to the URL query string. "
   },
   "Update Magic Url session": {
     "scope": "javascript",
@@ -74,7 +64,7 @@
     "body": [
       "const response = await account.updatePhoneSession(userId: '$1', number: '$2');"
     ],
-    "description": "Create a new Phone session"
+    "description": "Update the Phone session"
   },
 
   "Create Anonymous session": {
@@ -146,12 +136,12 @@
     "body": [
       "const response = await account.updateEnail(email: '$1', password: '$2');"
     ],
-    "description": "Update currently logged in user password. For validation, user is required to pass in the new password, and the old password. For users created with OAuth and Team Invites, oldPassword is optional."
+    "description": "Update currently logged in user account email address. After changing user address, the user confirmation status will get reset. A new confirmation email is not sent automatically however you can use the send confirmation email endpoint again to send the confirmation email. For security measures, user password is required to complete this request. "
   },
 
   "Update Account Preferences": {
     "scope": "javascript",
-    "prefix": ["updatePreferences", "upPrefs", "upPref", "upPreferences"],
+    "prefix": ["upPrefs", "upPref"],
     "body": ["const response = await account.updatePrefs(prefs: {$1});"],
     "description": "Update currently logged in user account preferences. The object you pass is stored as is, and replaces any previous value. The maximum allowed prefs size is 64kB and throws error if exceeded."
   },
@@ -208,7 +198,7 @@
     "body": [
       "const response = await account.updateVerification(userId: '$1',secret: '$2');"
     ],
-    "description": "Use this endpoint to send a verification message to your user email address to confirm they are the valid owners of that address. Both the userId and secret arguments will be passed as query parameters to the URL you have provided to be attached to the verification email. The provided URL should redirect the user back to your app and allow you to complete the verification process by verifying both the userId and secret parameters. Learn more about how to complete the verification process. The verification link sent to the user's email address is valid for 7 days."
+    "description": "Use this endpoint to complete the user email verification process. Use both the userId and secret parameters that were attached to your app URL to verify the user email ownership. If confirmed this route will return a 200 status code."
   },
 
   "Create Phone Verification": {

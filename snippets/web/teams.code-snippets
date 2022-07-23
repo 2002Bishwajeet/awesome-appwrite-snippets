@@ -24,14 +24,14 @@
 
   "Get Team": {
     "scope": "javascript",
-    "prefix": ["getTeam", "getTeam"],
+    "prefix": "getTeam",
     "body": ["const response = await team.get(\"${1:teamId}\");"],
     "description": "Get a team by its unique ID."
   },
 
   "Update Team": {
     "scope": "javascript",
-    "prefix": ["updateTeam", "updateTeam"],
+    "prefix": ["updateTeam","upTeam"],
     "body": [
       "const response = await team.update(\"${1:teamId}\",\"${2:name}\");"
     ],
@@ -40,7 +40,7 @@
 
   "Delete Team": {
     "scope": "javascript",
-    "prefix": ["deleteTeam", "deleteTeam"],
+    "prefix": ["deleteTeam", "delTeam"],
     "body": ["await team.delete(\"${1:teamId}\");"],
     "description": "Delete a team by its unique ID."
   },
@@ -56,7 +56,7 @@
 
   "Get Team Membership": {
     "scope": "javascript",
-    "prefix": ["getTeamMembership", "getTeamMembership"],
+    "prefix": ["getTeamMembership", "gtmembership"],
     "body": [
       "const response = await team.getMembership(\"${1:teamId}\");"
     ],
@@ -69,7 +69,7 @@
     "body": [
       "const response = await team.updateMembershipRoles(\"${1:teamId}\",\"${2:membershipId}\",[$3]);"
     ],
-    "description": "Update a team membership by its unique ID."
+    "description": "Modify the roles of a team member. Only team members with the owner role have access to this endpoint."
   },
 
   "Update Team Membership status": {
@@ -78,15 +78,15 @@
     "body": [
       "const response = await team.updateMembershipStatus(\"${1:teamId}\",\"${2:membershipId}\",\"${3:userId}\",\"${5:secret}\");"
     ],
-    "description": "Update a team membership by its unique ID."
+    "description": "Use this endpoint to allow a user to accept an invitation to join a team after being redirected back to your app from the invitation email received by the user."
   },
 
   "Delete Team Membership": {
     "scope": "javascript",
-    "prefix": ["deleteTeamMembership", "deleteTeamMembership"],
+    "prefix": ["deleteTeamMembership", "delTeamMembership"],
     "body": [
       "await team.deleteMembership(\"${1:teamId}\",\"${2:membershipId}\");"
     ],
-    "description": "Delete a team membership by its unique ID."
+    "description": "This endpoint allows a user to leave a team or for a team owner to delete the membership of any other team member. You can also use this endpoint to delete a user membership even if it is not accepted."
   }
 }
