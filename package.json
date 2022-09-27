@@ -2,7 +2,7 @@
   "name": "awesome-appwrite-snippets",
   "displayName": "Awesome Appwrite Snippets",
   "description": "Awesome Appwrite Snippets is a collection snippets and shortcuts of commonly used Appwrite APIs ",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "icon": "logo.png",
   "publisher": "Biswa",
   "engines": {
