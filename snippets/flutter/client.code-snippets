@@ -1,30 +1,15 @@
 {
-
-/* -----------------------FLUTTER----------------------- */
+  /* -----------------------FLUTTER----------------------- */
 
   "Add a Client": {
     "scope": "dart",
     "prefix": "client",
     "body": [
-      "final Client client = Client()",
-      "\t.setEndpoint('$1')",
-      "\t.setProject('$2')",
-      "\t.setSelfSigned(status:$3);"
+      "final Client ${1:client} = Client()",
+      "\t.setEndpoint(${2:https:/appwrite.io/v1})",
+      "\t.setProject(${3:project_id})",
+      "\t.setSelfSigned(status:$4);"
     ],
     "description": "Create a Client object and initialize it."
-  },
-
-/* -----------------------DART----------------------- */
-
-  "Add a Dart Client": {
-    "scope": "dart",
-    "prefix": "dartclient",
-    "body": [
-      "final Client client = Client()",
-      "\t.setEndpoint($1)",
-      "\t.setProject($2)",
-      "\t.setJWT('$3');"
-    ],
-    "description": "Create a dart Client object and initialize it."
-  },
+  }
 }
