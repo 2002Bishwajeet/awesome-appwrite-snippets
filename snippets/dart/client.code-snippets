@@ -6,7 +6,7 @@
       "final Client ${1:client} = Client()",
       "\t.setEndpoint(${2:https:/appwrite.io/v1})",
       "\t.setProject(${3:project_id})",
-      "\t.setSelfSigned('$4');"
+      "\t.setKey('${4:');"
     ],
     "description": "Create a dart Client object and initialize it."
   }
