@@ -10,7 +10,7 @@
     "scope": "javascript",
     "prefix": "createFile",
     "body": [
-      "const response = await storage.createFile(\"${1:bucketId}\" ,\"${2:fileId}\",document.getElementById('uploader').files[0] );"
+      "const ${1:response} = await storage.createFile(\"${2:bucketId}\" ,\"${3:fileId}\",${4:document.getElementById('uploader').files[0]} );"
     ],
     "description": "Create a new file. The user who creates the file will automatically be assigned to read and write access unless he has passed custom values for read and write arguments."
   },
@@ -18,7 +18,9 @@
   "List Files": {
     "scope": "javascript",
     "prefix": "listFiles",
-    "body": ["const response = await storage.listFiles(\"${1:bucketId}\" );"],
+    "body": [
+      "const ${1:response} = await storage.listFiles(\"${2:bucketId}\" );"
+    ],
     "description": "Get a list of all the user files. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's files."
   },
 
@@ -26,7 +28,7 @@
     "scope": "javascript",
     "prefix": "getFile",
     "body": [
-      "const response = await storage.getFile(\"${1:bucketId}\" ,\"${2:fileId}\");"
+      "const ${1:response} = await storage.getFile(\"${2:bucketId}\" ,\"${3:fileId}\");"
     ],
     "description": "Get a file by its unique ID."
   },
@@ -35,7 +37,7 @@
     "scope": "javascript",
     "prefix": "getFilePreview",
     "body": [
-      "const response = await storage.getFilePreview(\"${1:bucketId}\" ,\"${2:fileId}\");"
+      "const ${1:response} = await storage.getFilePreview(\"${2:bucketId}\" ,\"${3:fileId}\");"
     ],
     "description": "Get a file preview by its unique ID."
   },
@@ -44,7 +46,7 @@
     "scope": "javascript",
     "prefix": "getFileForDownload",
     "body": [
-      "const response = await storage.getFileDownload(\"${1:bucketId}\" ,\"${2:fileId}\");"
+      "const ${1:response} = await storage.getFileDownload(\"${2:bucketId}\" ,\"${3:fileId}\");"
     ],
     "description": "Get a file for download by its unique ID."
   },
@@ -53,7 +55,7 @@
     "scope": "javascript",
     "prefix": "getFileForView",
     "body": [
-      "const response = await storage.getFileView(\"${1:bucketId}\",\"${2:fileId}\");"
+      "const ${1:response} = await storage.getFileView(\"${2:bucketId}\",\"${3:fileId}\");"
     ],
     "description": "Get a file content by its unique ID. This endpoint is similar to the download method but returns with no 'Content-Disposition: attachment' header."
   },
@@ -62,7 +64,7 @@
     "scope": "javascript",
     "prefix": "updateFile",
     "body": [
-      "const response = await storage.updateFile(\"${1:bucketId}\" ,\"${2:fileId}\", [\"${3:read}\"],[\"${4:write}\"]);"
+      "const ${1:response} = await storage.updateFile(\"${2:bucketId}\" ,\"${3:fileId}\", [\"${4:read}\"],[\"${5:write}\"]);"
     ],
     "description": "Update a file by its unique ID. Only users with write permissions have access to update this resource."
   },
@@ -70,7 +72,7 @@
   "Delete File": {
     "scope": "javascript",
     "prefix": "deleteFile",
-    "body": ["await storage.deleteFile(\"${1:bucketId}\" ,\"${2:fileId}\");"],
+    "body": ["await storage.deleteFile(\"${2:bucketId}\" ,\"${3:fileId}\");"],
     "description": "Delete a file by its unique ID. Only users with write permissions have access to delete this resource."
   }
 }
