@@ -2,9 +2,7 @@
   "Initialize Database": {
     "scope": "javascript",
     "prefix": ["database"],
-    "body": [
-      "const Database database = Database(client,\"${1:databaseId}\" );"
-    ],
+    "body": ["const database = Database(client,\"${1:databaseId}\" );"],
     "description": "Create a Database object and initialize it."
   },
 
@@ -12,7 +10,7 @@
     "scope": "javascript",
     "prefix": ["crdoc", "crDocument"],
     "body": [
-      "const response = await database.createDocument(\"${1:collectionId}\", \"${2:documentId}\", {\"${3:data}\"});"
+      "const ${1:response} = await database.createDocument(\"${2:collectionId}\", \"${3:documentId}\", {\"${4:data}\"});"
     ],
     "description": "Create a new Document. Before using this route, you should create a new collection resource using either a server integration API or directly from your database console."
   },
@@ -21,7 +19,7 @@
     "scope": "javascript",
     "prefix": ["lsdoc", "lsd"],
     "body": [
-      "const response = await database.listDocuments(\"${1:collectionId}\",);"
+      "const ${1:response} = await database.listDocuments(\"${2:collectionId}\",);"
     ],
     "description": "Get a list of all the user documents. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's documents."
   },
@@ -30,7 +28,7 @@
     "scope": "javascript",
     "prefix": "getDocument",
     "body": [
-      "const response = await database.getDocument(\"${1:collectionId}\", \"${2:documentId}\");"
+      "const ${1:response} = await database.getDocument(\"${2:collectionId}\", \"${3:documentId}\");"
     ],
     "description": "Get a document by its unique ID. This endpoint response returns a JSON object with the document data."
   },
@@ -39,16 +37,16 @@
     "scope": "javascript",
     "prefix": ["updateDocument"],
     "body": [
-      "const response = await database.updateDocument( \"${1:collectionId}\", \"${2:documentId}\", {$3});"
+      "const ${1:response} = await database.updateDocument( \"${2:collectionId}\", \"${3:documentId}\", {$4});"
     ],
     "description": "Update a document by its unique ID. Using the patch method you can pass only specific fields that will get updated."
   },
 
   "Delete Document": {
     "scope": "javascript",
-    "prefix": ["deleteDocument","deldoc"],
+    "prefix": ["deleteDocument", "deldoc"],
     "body": [
-      "await database.deleteDocument( \"${1:collectionId}\", \"${2:documentId}\");"
+      "await database.deleteDocument( \"${2:collectionId}\", \"${3:documentId}\");"
     ],
     "description": "Delete a document by its unique ID. This endpoint deletes only the parent documents, its attributes and relations to other documents. Child documents will not be deleted."
   }
