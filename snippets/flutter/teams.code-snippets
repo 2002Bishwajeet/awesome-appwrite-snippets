@@ -10,7 +10,7 @@
     "scope": "dart",
     "prefix": ["createTeam", "crTeam"],
     "body": [
-      "final response = await team.create(teamId: \"${1:teamId}\" ,name: \"${2:name}\");"
+      "final ${1:response} = await team.create(teamId: \"${2:teamId}\" ,name: \"${3:name}\");"
     ],
     "description": "Create a new Team."
   },
@@ -18,22 +18,22 @@
   "List Teams": {
     "scope": "dart",
     "prefix": ["listTeams", "listTeams"],
-    "body": ["final response = await team.list();"],
+    "body": ["final ${1:response} = await team.list();"],
     "description": "Get a list of all the user teams. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's teams."
   },
 
   "Get Team": {
     "scope": "dart",
     "prefix": "getTeam",
-    "body": ["final response = await team.get(teamId: \"${1:teamId}\");"],
+    "body": ["final ${1:response} = await team.get(teamId: \"${2:teamId}\");"],
     "description": "Get a team by its unique ID."
   },
 
   "Update Team": {
     "scope": "dart",
-    "prefix": ["updateTeam","upTeam"],
+    "prefix": ["updateTeam", "upTeam"],
     "body": [
-      "final response = await team.update(teamId: \"${1:teamId}\", name: \"${2:name}\");"
+      "final ${1:response} = await team.update(teamId: \"${2:teamId}\", name: \"${3:name}\");"
     ],
     "description": "Update a team by its unique ID."
   },
@@ -41,7 +41,7 @@
   "Delete Team": {
     "scope": "dart",
     "prefix": ["deleteTeam", "delTeam"],
-    "body": ["await team.delete(teamId: \"${1:teamId}\");"],
+    "body": ["await team.delete(teamId: \"${2:teamId}\");"],
     "description": "Delete a team by its unique ID."
   },
 
@@ -49,7 +49,7 @@
     "scope": "dart",
     "prefix": ["createTeamMembership", "crTeamMembership"],
     "body": [
-      "final response = await team.createMembership(teamId: \"${1:teamId}\", email: \"${2:email}\",roles: [$3], url: \"${4:url}\");"
+      "final ${1:response} = await team.createMembership(teamId: \"${2:teamId}\", email: \"${3:email}\",roles: [$4], url: \"${5:url}\");"
     ],
     "description": "Create a new Team Membership."
   },
@@ -58,7 +58,7 @@
     "scope": "dart",
     "prefix": ["getTeamMembership", "gtmembership"],
     "body": [
-      "final response = await team.getMembership(teamId: \"${1:teamId}\");"
+      "final ${1:response} = await team.getMembership(teamId: \"${2:teamId}\");"
     ],
     "description": "Get a team membership by its unique ID."
   },
@@ -67,7 +67,7 @@
     "scope": "dart",
     "prefix": ["updateTeamMembershiproles"],
     "body": [
-      "final response = await team.updateMembershipRoles(teamId: \"${1:teamId}\", membershipId: \"${2:membershipId}\",roles: [$3]);"
+      "final ${1:response} = await team.updateMembershipRoles(teamId: \"${2:teamId}\", membershipId: \"${3:membershipId}\",roles: [$4]);"
     ],
     "description": "Modify the roles of a team member. Only team members with the owner role have access to this endpoint."
   },
@@ -76,7 +76,7 @@
     "scope": "dart",
     "prefix": ["updateTeamMembershipstatus"],
     "body": [
-      "final response = await team.updateMembershipStatus(teamId: \"${1:teamId}\", membershipId: \"${2:membershipId}\", userId: \"${3:userId}\", secret: \"${5:secret}\");"
+      "final ${1:response} = await team.updateMembershipStatus(teamId: \"${2:teamId}\", membershipId: \"${3:membershipId}\", userId: \"${4:userId}\", secret: \"${5:secret}\");"
     ],
     "description": "Use this endpoint to allow a user to accept an invitation to join a team after being redirected back to your app from the invitation email received by the user."
   },
@@ -85,7 +85,7 @@
     "scope": "dart",
     "prefix": ["deleteTeamMembership", "deleteTeamMembership"],
     "body": [
-      "await team.deleteMembership(teamId: \"${1:teamId}\", membershipId: \"${2:membershipId}\");"
+      "await team.deleteMembership(teamId: \"${2:teamId}\", membershipId: \"${3:membershipId}\");"
     ],
     "description": "This endpoint allows a user to leave a team or for a team owner to delete the membership of any other team member. You can also use this endpoint to delete a user membership even if it is not accepted."
   }
