@@ -2,7 +2,7 @@
   "Initialize Storage": {
     "scope": "javascript",
     "prefix": ["storage"],
-    "body": ["const Storage storage = Storage(client);"],
+    "body": ["const storage = Storage(client);"],
     "description": "Create a Storage object and initialize it."
   },
 
