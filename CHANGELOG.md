@@ -8,6 +8,15 @@ All notable changes to the "awesome-appwrite-snippets" extension will be documen
 
 - Initial release -->
 
+## [0.2.0] - 2022-09-29
+## What's Changed
+* [ImgBot] Optimize images by @imgbot in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/5
+* Add Badges by @2002Bishwajeet in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/7
+* Feat 1.0.0 hacktoberfest by @2002Bishwajeet in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/8
+
+
+**Full Changelog**: https://github.com/2002Bishwajeet/awesome-appwrite-snippets/compare/v0.1.0...v0.2.0
+
 ## [0.1.0] - 2022-07-23
 
 ## What's Changed
