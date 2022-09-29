@@ -79,7 +79,7 @@
     "url": "https://github.com/sponsors/2002bishwajeet"
   },
   "devDependencies": {
-    "vsce": "^2.9.2"
+    "vsce": "^2.11.0"
   },
   "license": "MIT"
 }
