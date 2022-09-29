@@ -2,14 +2,14 @@
   "Initialize account": {
     "scope": "javascript",
     "prefix": "account",
-    "body": ["const account = new Account(client);"],
+    "body": ["const ${1:account} = new Account(${2:client});"],
     "description": "Create a Account object and initialize it."
   },
   "Create account": {
     "scope": "javascript",
     "prefix": ["crAccount", "createAcount"],
     "body": [
-      "const response = await account.create(\"${1:userId}\",\"${2:email}\",\"${3:password}\");"
+      "const ${1:response} = await account.create(\"${2:unique()}\",\"${3:email}\",\"${4:password}\");"
     ],
     "description": "Allow a new user to register a new account in your project."
   },
@@ -18,7 +18,7 @@
     "scope": "javascript",
     "prefix": ["crsemail", "createEmailSession"],
     "body": [
-      "const response = await account.createEmailSession(\"${1:email}\", \"${2:password}\");"
+      "const ${1:response} = await account.createEmailSession(\"${2:email}\", \"${3:password}\");"
     ],
     "description": "Create a new Account Session"
   },
@@ -27,7 +27,7 @@
     "scope": "javascript",
     "prefix": ["crsessionOAuth2"],
     "body": [
-      "const response = await account.createOAuth2Session(provider: \"${1:provider}\");"
+      "const ${1:response} = await account.createOAuth2Session(\"${2:provider}\");"
     ],
     "description": "Create a new Account Session with OAuth2"
   },
@@ -36,7 +36,7 @@
     "scope": "javascript",
     "prefix": ["magicUrl", "mgURLSession"],
     "body": [
-      "const response = await account.createMagicURLSession(userId: \"${1:userId}\", email:  \"${1:email}\");"
+      "const ${1:response} = await account.createMagicURLSession(\"${2:unique()}\", \"${3:email}\");"
     ],
     "description": "Sends the user an email with a secret key for creating a session. When the user clicks the link in the email, the user is redirected back to the URL you provided with the secret key and userId values attached to the URL query string. "
   },
@@ -44,7 +44,7 @@
     "scope": "javascript",
     "prefix": ["upMagicUrl", "updatemagicUrl", "mgURLSession"],
     "body": [
-      "const response = await account.updateMagicURLSession(userId: '$1', secret: '$2');"
+      "const ${1:response} = await account.updateMagicURLSession('${2:unique()}', '${3:secret}');"
     ],
     "description": "Update Magic URL session"
   },
@@ -53,7 +53,7 @@
     "scope": "javascript",
     "prefix": ["crsPhone", "createPhoneSession"],
     "body": [
-      "const response = await account.createPhoneSession(userId: '$1', number: '$2');"
+      "const ${1:response} = await account.createPhoneSession('${2:unique()}','${3:number}');"
     ],
     "description": "Create a new Phone session"
   },
@@ -62,7 +62,7 @@
     "scope": "javascript",
     "prefix": ["upPhone", "updatePhoneSession"],
     "body": [
-      "const response = await account.updatePhoneSession(userId: '$1', number: '$2');"
+      "const ${1:response} = await account.updatePhoneSession('${2:unique()}','${3:number}');"
     ],
     "description": "Update the Phone session"
   },
@@ -70,63 +70,67 @@
   "Create Anonymous session": {
     "scope": "javascript",
     "prefix": ["crsAccount", "crAnonymous", "createAnonymousSession"],
-    "body": ["const response = await account.createAnonymousSession();"],
+    "body": ["const ${1:response} = await account.createAnonymousSession();"],
     "description": "Create a new Anonymous Session"
   },
 
   "Create JWT": {
     "scope": "javascript",
     "prefix": ["crJWT", "JWT"],
-    "body": ["const response = await account.createJWT();"],
+    "body": ["const ${1:response} = await account.createJWT();"],
     "description": "Create a new Account using JWT"
   },
 
   "Get Account": {
     "scope": "javascript",
     "prefix": ["getAccount"],
-    "body": ["const User? user = await account.get();"],
+    "body": ["const ${1:user} = await account.get();"],
     "description": "Get currently logged in user data as JSON object."
   },
 
   "Get Account Preferences": {
     "scope": "javascript",
     "prefix": ["getAccountPreferences", "getAccPrefs"],
-    "body": ["const response = await account.getPrefs();"],
+    "body": ["const ${1:response} = await account.getPrefs();"],
     "description": "Get currently logged in user preferences as a key-value object."
   },
 
   "Get Account Sessions": {
     "scope": "javascript",
     "prefix": ["getAccountSession", "getAccSession"],
-    "body": ["const response = await account.getSessions();"],
+    "body": ["const ${1:response} = await account.getSessions();"],
     "description": "Get currently logged in user list of active sessions across different devices."
   },
 
   "Get Account Logs": {
     "scope": "javascript",
     "prefix": ["getAccountLogs", "getAccLog"],
-    "body": ["const response = await account.getLogs();"],
+    "body": ["const ${1:response} = await account.getLogs();"],
     "description": "Get currently logged in user list of latest security activity logs. Each log returns user IP address, location and date and time of log."
   },
 
   "Get Session by ID": {
     "scope": "javascript",
     "prefix": ["getSessionId", "getSessionbyId"],
-    "body": ["const response = await account.getSesssion(sessionId: '$1');"],
+    "body": [
+      "const ${1:response} = await account.getSesssion('${2:sessionId}');"
+    ],
     "description": "Use this endpoint to get a logged in user's session using a Session ID. Inputting 'current' will return the current session being used."
   },
 
   "Update Account Name": {
     "scope": "javascript",
     "prefix": ["updateName", "upName"],
-    "body": ["const response = await account.updateName(name: '$1');"],
+    "body": ["const ${1:response} = await account.updateName('${2:name}');"],
     "description": "Update currently logged in user account name."
   },
 
   "Update Account Password": {
     "scope": "javascript",
     "prefix": ["updatePassword", "upPass"],
-    "body": ["const response = await account.updatePassword(password: '$1');"],
+    "body": [
+      "const ${1:response} = await account.updatePassword('${2:password}');"
+    ],
     "description": "Update currently logged in user password. For validation, user is required to pass in the new password, and the old password. For users created with OAuth and Team Invites, oldPassword is optional."
   },
 
@@ -134,7 +138,7 @@
     "scope": "javascript",
     "prefix": ["updateEmail", "upEmail"],
     "body": [
-      "const response = await account.updateEnail(email: '$1', password: '$2');"
+      "const ${1:response} = await account.updateEmail('$2{email}','${3:password}');"
     ],
     "description": "Update currently logged in user account email address. After changing user address, the user confirmation status will get reset. A new confirmation email is not sent automatically however you can use the send confirmation email endpoint again to send the confirmation email. For security measures, user password is required to complete this request. "
   },
@@ -142,7 +146,7 @@
   "Update Account Preferences": {
     "scope": "javascript",
     "prefix": ["upPrefs", "upPref"],
-    "body": ["const response = await account.updatePrefs(prefs: {$1});"],
+    "body": ["const ${1:response} = await account.updatePrefs({$2});"],
     "description": "Update currently logged in user account preferences. The object you pass is stored as is, and replaces any previous value. The maximum allowed prefs size is 64kB and throws error if exceeded."
   },
 
@@ -156,7 +160,7 @@
   "Delete Account Session": {
     "scope": "javascript",
     "prefix": ["deleteAccountSession", "delAccSession"],
-    "body": ["await account.deleteSession(sessionId: '$1');"],
+    "body": ["await account.deleteSession('${1:sessionId}');"],
     "description": "Use this endpoint to log out the currently logged in user from all their account sessions across all of their different devices. When using the option id argument, only the session unique ID provider will be deleted."
   },
 
@@ -171,7 +175,7 @@
     "scope": "javascript",
     "prefix": ["recPassword", "crRecovery"],
     "body": [
-      "const response = await account.createRecovery(email: '$1', url:'$2');"
+      "const ${1:response} = await account.createRecovery('${2:email}','${3:url}');"
     ],
     "description": "Sends the user an email with a temporary secret key for password reset. When the user clicks the confirmation link he is redirected back to your app password reset URL with the secret key and email address values attached to the URL query string. Use the query string params to submit a request to the PUT /account/recovery endpoint to complete the process. The verification link sent to the user's email address is valid for 1 hour."
   },
@@ -180,7 +184,7 @@
     "scope": "javascript",
     "prefix": ["upRecovery", "updateRecovery"],
     "body": [
-      "const response = await account.updateRecovery(userId: '$1', secret:'$2',password: '$3',passwordAgain:'$4');"
+      "const ${1:response} = await account.updateRecovery('${2:userId}', '${3:secret}','${4:password}','${5:password}');"
     ],
     "description": "Sends the user an email with a temporary secret key for password reset. When the user clicks the confirmation link he is redirected back to your app password reset URL with the secret key and email address values attached to the URL query string. Use the query string params to submit a request to the PUT /account/recovery endpoint to complete the process. The verification link sent to the user's email address is valid for 1 hour."
   },
@@ -188,7 +192,9 @@
   "Create Email Verification": {
     "scope": "javascript",
     "prefix": ["emailVerification", "crEmailVerification"],
-    "body": ["const response = await account.createVerification(url: '$1');"],
+    "body": [
+      "const ${1:response} = await account.createVerification('${2:url}');"
+    ],
     "description": "Use this endpoint to send a verification message to your user email address to confirm they are the valid owners of that address. Both the userId and secret arguments will be passed as query parameters to the URL you have provided to be attached to the verification email. The provided URL should redirect the user back to your app and allow you to complete the verification process by verifying both the userId and secret parameters. Learn more about how to complete the verification process. The verification link sent to the user's email address is valid for 7 days."
   },
 
@@ -196,7 +202,7 @@
     "scope": "javascript",
     "prefix": ["emailVerificationconfirmation", "crEmailVerificationconfirm"],
     "body": [
-      "const response = await account.updateVerification(userId: '$1',secret: '$2');"
+      "const ${1:response} = await account.updateVerification('${2:userId}','${3:secret}');"
     ],
     "description": "Use this endpoint to complete the user email verification process. Use both the userId and secret parameters that were attached to your app URL to verify the user email ownership. If confirmed this route will return a 200 status code."
   },
@@ -204,7 +210,7 @@
   "Create Phone Verification": {
     "scope": "javascript",
     "prefix": ["phoneVerification", "crPhoneVerification"],
-    "body": ["const response = await account.createPhoneVerification();"],
+    "body": ["const ${1:response} = await account.createPhoneVerification();"],
     "description": "Use this endpoint to send a verification SMS to the currently logged in user. This endpoint is meant for use after updating a user's phone number using the accountUpdatePhone endpoint. Learn more about how to complete the verification process. The verification code sent to the user's phone number is valid for 15 minutes."
   },
 
@@ -212,7 +218,7 @@
     "scope": "javascript",
     "prefix": ["phoneVerificationconfirmation", "crPhoneVerificationconfirm"],
     "body": [
-      "const response = await account.updatePhoneVerification(userId: '$1',secret: '$2');"
+      "const ${1:response} = await account.updatePhoneVerification('${2:userId}','${3:secret}');"
     ],
     "description": "Use this endpoint to complete the user phone verification process. Use the userId and secret that were sent to your user's phone number to verify the user email ownership. If confirmed this route will return a 200 status code."
   }

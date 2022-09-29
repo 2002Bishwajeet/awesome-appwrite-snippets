@@ -65,7 +65,7 @@ The following tables portrays the snippets of the following Appwrite API in thei
 |    Health     |      |         |       |      |        |      |     |        |
 |     Users     |      |         |       |      |        |      |     |        |
 
-These snippets supports for the appwrite version ![Appwrite Version](https://img.shields.io/badge/appwrite-v0.15.2-%23f02e65)
+These snippets supports for the appwrite version ![Appwrite Version](https://img.shields.io/badge/appwrite-v1.1.0-%23f02e65)
 
 ## Rest API Snippets
 
