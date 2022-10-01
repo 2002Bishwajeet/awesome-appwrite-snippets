@@ -41,14 +41,16 @@ body:
         - Version 0.15.x
         - Version 0.14.x
         - Version 0.13.x
-        - Version 0.12.x
-        - Version 0.11.x
-        - Version 0.10.x
-        - Version 0.9.x
-        - Version 0.8.x
-        - Version 0.7.x
-        - Version 0.6.x
-        - Different version (specify in environment)
+    validations:
+      required: true
+  - type: dropdown
+    id: awesome-appwrite-snippet-version
+    attributes:
+      label: "🎲 Awesome Appwrite Snippet version"
+      description: "What version of Awesome Appwrite Snippet are you running?"
+      options:
+        - Version 0.2.x
+        - Version 0.1.x
     validations:
       required: true
   - type: dropdown
@@ -63,14 +65,6 @@ body:
         - Something else
     validations:
       required: true
-  - type: textarea
-    id: environment
-    validations:
-      required: false
-    attributes:
-      label: "🧱 Your Environment"
-      description: "Is your environment customized in any way?"
-      placeholder: "I use Cloudflare for ..."
   - type: checkboxes
     id: no-duplicate-issues
     attributes:
