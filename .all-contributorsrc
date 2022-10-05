@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "Nikhil-1503",
+      "name": "Nikhil Shanbhag",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61755381?v=4",
+      "profile": "https://github.com/Nikhil-1503",
+      "contributions": [
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "awesome-appwrite-snippets",
+  "projectOwner": "2002Bishwajeet"
+}
