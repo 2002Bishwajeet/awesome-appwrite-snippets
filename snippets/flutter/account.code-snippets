@@ -10,7 +10,7 @@
     "scope": "dart",
     "prefix": ["crAccount", "createAccount"],
     "body": [
-      "final User ${1:user} = await account.create(userId: '${2:unique()}', email: '${3:email}', password: '${4:password}');"
+      "final ${1:account} = await account.create(userId: '${2:unique()}', email: '${3:email}', password: '${4:password}');"
     ],
     "description": "Allow a new user to register a new account in your project."
   },
