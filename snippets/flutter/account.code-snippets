@@ -141,7 +141,7 @@
     "scope": "dart",
     "prefix": ["updateEmail", "upEmail"],
     "body": [
-      "final ${1:response} = await account.updateEnail(email: '${2:email}', password: '${3:password}');"
+      "final ${1:response} = await account.updateEmail(email: '${2:email}', password: '${3:password}');"
     ],
     "description": "Update currently logged in user account email address. After changing user address, the user confirmation status will get reset. A new confirmation email is not sent automatically however you can use the send confirmation email endpoint again to send the confirmation email. For security measures, user password is required to complete this request."
   },
