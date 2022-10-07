@@ -65,7 +65,7 @@ The following tables portrays the snippets of the following Appwrite API in thei
 |   Functions   |      |         |       |      |        |      |     |        |
 | Localizations |      |         |       |      |        |      |     |        |
 |    Avatars    |      |         |       |      |        |      |     |        |
-|    Health     |      |         |       |      |        |      |     |        |
+|    Health     |      |         |       |      |        |      | ✅  |        |
 |     Users     |      |         |       |      |        |      |     |        |
 
 These snippets supports for the appwrite version ![Appwrite Version](https://img.shields.io/badge/appwrite-v1.1.0-%23f02e65)
