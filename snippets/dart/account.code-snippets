@@ -1,118 +1,51 @@
 {
     "Initialize account": {
       "scope": "dart",
-      "prefix": ["account"],
-      "body": ["final Account ${1:account} = Account(client);"],
+      "prefix": ["sAccount"],
+      "body": ["final Account ${1:account} = ${2:client};"],
       "description": "Create a Account object and initialize it."
-    },
-  
-    "Create account": {
-      "scope": "dart",
-      "prefix": ["crAccount", "createAccount"],
-      "body": [
-        "final ${1:account} = await account.create(userId: '${2:unique()}', email: '${3:email}', password: '${4:password}');"
-      ],
-      "description": "Allow a new user to register a new account in your project."
-    },
-  
-    "Create account Session with Email": {
-      "scope": "dart",
-      "prefix": ["crsemail", "createEmailSession"],
-      "body": [
-        "final ${1:session} = await account.createEmailSession( email: '${2:email}', password: '${3:password}');"
-      ],
-      "description": "Create a new Account Session"
-    },
-  
-    "Create account Session with OAuth2": {
-      "scope": "dart",
-      "prefix": ["crsessionOAuth2"],
-      "body": [
-        "final ${1:response} = await account.createOAuth2Session(provider: '${2:provider}');"
-      ],
-      "description": "Create a new Account Session with OAuth2"
-    },
-  
-    "Create Magic Url session": {
-      "scope": "dart",
-      "prefix": ["magicUrl", "mgURLSession"],
-      "body": [
-        "final ${1:response} = await account.createMagicURLSession(userId: '${1:unique()}', email: '${2:email}');"
-      ],
-      "description": "Sends the user an email with a secret key for creating a session. When the user clicks the link in the email, the user is redirected back to the URL you provided with the secret key and userId values attached to the URL query string. "
-    },
-    "Update Magic Url session": {
-      "scope": "dart",
-      "prefix": ["upMagicUrl", "updatemagicUrl", "mgURLSession"],
-      "body": [
-        "final ${1:response} = await account.updateMagicURLSession(userId: '${2:unique()}', secret: '${3:secret-key}');"
-      ],
-      "description": "Update Magic URL session"
-    },
-  
-    "Create Phone session": {
-      "scope": "dart",
-      "prefix": ["crsPhone", "createPhoneSession"],
-      "body": [
-        "final ${1:response} = await account.createPhoneSession(userId: '${2:unique()}', number: '${3:number}');"
-      ],
-      "description": "Create a new Phone session"
     },
   
     "Update Phone session": {
       "scope": "dart",
-      "prefix": ["upPhone", "updatePhoneSession"],
+      "prefix": ["sUpPhone", "sUpdatePhoneSession"],
       "body": [
         "final ${1:response} = await account.updatePhoneSession(userId: '${2:unique()}', number: '${3:number');"
       ],
       "description": "Update the Phone session"
     },
-  
-    "Create Anonymous session": {
-      "scope": "dart",
-      "prefix": ["crsAccount", "crAnonymous", "createAnonymousSession"],
-      "body": ["final ${1:response} = await account.createAnonymousSession();"],
-      "description": "Create a new Anonymous Session"
-    },
-  
-    "Create JWT": {
-      "scope": "dart",
-      "prefix": ["crJWT", "JWT"],
-      "body": ["final ${1:response} = await account.createJWT();"],
-      "description": "Create a new Account using JWT"
-    },
-  
+
     "Get Account": {
       "scope": "dart",
-      "prefix": ["getAccount"],
+      "prefix": ["sGetAccount"],
       "body": ["final ${1:user} = await account.get();"],
       "description": "Get currently logged in user data as JSON object."
     },
   
     "Get Account Preferences": {
       "scope": "dart",
-      "prefix": ["getAccountPreferences", "getAccPrefs"],
+      "prefix": ["sGetAccountPreferences", "sGetAccPrefs"],
       "body": ["final ${1:response} = await account.getPrefs();"],
       "description": "Get currently logged in user preferences as a key-value object."
     },
   
     "Get Account Sessions": {
       "scope": "dart",
-      "prefix": ["getAccountSession", "getAccSession"],
+      "prefix": ["sGetAccountSession", "sGetAccSession"],
       "body": ["final ${1:response} = await account.getSessions();"],
       "description": "Get currently logged in user list of active sessions across different devices."
     },
   
     "Get Account Logs": {
       "scope": "dart",
-      "prefix": ["getAccountLogs", "getAccLog"],
+      "prefix": ["sGetAccountLogs", "sGetAccLog"],
       "body": ["final ${1:response} = await account.getLogs();"],
       "description": "Get currently logged in user list of latest security activity logs. Each log returns user IP address, location and date and time of log."
     },
   
     "Get Session by ID": {
       "scope": "dart",
-      "prefix": ["getSessionId", "getSessionbyId"],
+      "prefix": ["sGetSessionId", "sGetSessionbyId"],
       "body": [
         "final ${1:response} = await account.getSesssion(sessionId: '${1:sessionId}');"
       ],
@@ -121,7 +54,7 @@
   
     "Update Account Name": {
       "scope": "dart",
-      "prefix": ["updateName", "upName"],
+      "prefix": ["sUpdateName", "sUpName"],
       "body": [
         "final ${1:response} = await account.updateName(name: '${2:name}');"
       ],
@@ -130,7 +63,7 @@
   
     "Update Account Password": {
       "scope": "dart",
-      "prefix": ["updatePassword", "upPass"],
+      "prefix": ["sUpdatePassword", "sUpPass"],
       "body": [
         "final ${1:response} = await account.updatePassword(password: '${2:password}');"
       ],
@@ -139,7 +72,7 @@
   
     "Update Account Email": {
       "scope": "dart",
-      "prefix": ["updateEmail", "upEmail"],
+      "prefix": ["sUpdateEmail", "sUpEmail"],
       "body": [
         "final ${1:response} = await account.updateEmail(email: '${2:email}', password: '${3:password}');"
       ],
@@ -148,7 +81,7 @@
   
     "Update Account Preferences": {
       "scope": "dart",
-      "prefix": ["upPrefs", "upPref"],
+      "prefix": ["sUpPrefs", "sUpPref"],
       "body": ["final ${1:response} = await account.updatePrefs(prefs: {$2});"],
       "description": "Update currently logged in user account preferences. The object you pass is stored as is, and replaces any previous value. The maximum allowed prefs size is 64kB and throws error if exceeded."
     },
@@ -156,21 +89,21 @@
   
     "Delete Account Session": {
       "scope": "dart",
-      "prefix": ["deleteAccountSession", "delAccSession"],
+      "prefix": ["sDeleteAccountSession", "sDelAccSession"],
       "body": ["await account.deleteSession(sessionId: '${1:sessionId}');"],
       "description": "Use this endpoint to log out the currently logged in user from all their account sessions across all of their different devices. When using the option id argument, only the session unique ID provider will be deleted."
     },
   
     "Delete All Account Sessions": {
       "scope": "dart",
-      "prefix": ["deleteAccountSessions", "delAccSessions"],
+      "prefix": ["sDeleteAccountSessions", "sDelAccSessions"],
       "body": ["await account.deleteSessions();"],
       "description": "Delete all sessions from the user account and remove any sessions cookies from the end client."
     },
   
     "Create Password Recovery": {
       "scope": "dart",
-      "prefix": ["recPassword", "crRecovery"],
+      "prefix": ["sRecPassword", "sCrRecovery"],
       "body": [
         "final ${1:response} = await account.createRecovery(email: '${2:email}', url:'${3:url}');"
       ],
@@ -179,7 +112,7 @@
   
     "Create Password Recovery(confirmation)": {
       "scope": "dart",
-      "prefix": ["upRecovery", "updateRecovery"],
+      "prefix": ["sUpRecovery", "sUpdateRecovery"],
       "body": [
         "final ${1:response} = await account.updateRecovery(userId: '${2:unique()}', secret:'${3:secret}',password: '${4:password}',passwordAgain:'${5:password}');"
       ],
@@ -188,7 +121,7 @@
   
     "Create Email Verification": {
       "scope": "dart",
-      "prefix": ["emailVerification", "crEmailVerification"],
+      "prefix": ["sEmailVerification", "sCrEmailVerification"],
       "body": [
         "final ${1:response} = await account.createVerification(url: '${2:url}');"
       ],
@@ -197,7 +130,7 @@
   
     "Create Email Verification(confirmation)": {
       "scope": "dart",
-      "prefix": ["emailVerificationconfirmation", "crEmailVerificationconfirm"],
+      "prefix": ["sEmailVerificationconfirmation", "sCrEmailVerificationconfirm"],
       "body": [
         "final ${1:response} = await account.updateVerification(userId: '${2:unique()}',secret: '${3:secret}');"
       ],
@@ -206,14 +139,14 @@
   
     "Create Phone Verification": {
       "scope": "dart",
-      "prefix": ["phoneVerification", "crPhoneVerification"],
+      "prefix": ["sPhoneVerification", "sCrPhoneVerification"],
       "body": ["final ${1:response} = await account.createPhoneVerification();"],
       "description": "Use this endpoint to send a verification SMS to the currently logged in user. This endpoint is meant for use after updating a user's phone number using the accountUpdatePhone endpoint. Learn more about how to complete the verification process. The verification code sent to the user's phone number is valid for 15 minutes."
     },
   
     "Create Phone Verification(confirmation)": {
       "scope": "dart",
-      "prefix": ["phoneVerificationconfirmation", "crPhoneVerificationconfirm"],
+      "prefix": ["sPhoneVerificationconfirmation", "sCrPhoneVerificationconfirm"],
       "body": [
         "final ${1:response} = await account.updatePhoneVerification(userId: '${2:unique()}',secret: '${3:secret}');"
       ],
