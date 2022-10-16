@@ -1,0 +1,30 @@
+{
+		"create Execution": {
+			"scope" : "javascript", 
+			"prefix" : "execute", 
+			"body" : ["const promise = funtion.createExecution(`${1:[FUNCTION_ID]}`)"] , 
+			"description": "Execute code in the background. Default value is false." 
+		},
+	
+		"List Execution": {
+			"scope" : "javascript" , 
+			"prefix": "list" , 
+			"body": ["const promise = funtion.listExecution(`${1:[FUNCTION_ID]}`)"] ,
+			"description": "Search term to filter your list results. Max length: 256 chars."
+		} ,
+	
+		"Get Execution" : {
+			"scope" : "javascript" , 
+			"prefix": "get" , 
+			"body": ["const promise = funtion.getExecution(`${1:[FUNCTION_ID]}` , `${2:[EXECUTION_ID]}`)"] ,
+			"description": "Execution ID."
+		} ,
+	
+		"Retry Build" : {
+			"scope" : "javascript" , 
+			"prefix": "retry" , 
+			"body": ["const promise = funtion.getExecution(`${1:[FUNCTION_ID]}` , `${2:[EXECUTION_ID]}` , `${3:[BUILD_ID]`)}"] ,
+			"description": "Build unique ID."
+		}
+	
+}
