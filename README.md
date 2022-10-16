@@ -27,6 +27,7 @@ Awesome Appwrite Snippets is a collection of commonly used Appwrite APIs. It inc
   - [Databases](#databases)
   - [Storage](#storage)
   - [Teams](#teams)
+  - [Health](#health)
 - [Known Issues](#known-issues)
 - [Contributing](#contributing)
 - [License](#license)
@@ -165,6 +166,25 @@ To know more about Teams API, head over this [page](https://appwrite.io/docs/cli
 | `updateTeamMembershiproles`                 | Modify the roles of a team member. Only team members with the owner role have access to this endpoint.                                                                                                    |
 | `updateTeamMembershipstatus`                | Use this endpoint to allow a user to accept an invitation to join a team after being redirected back to your app from the invitation email received by the user.                                          |
 | `deleteTeamMembership`, `delTeamMembership` | This endpoint allows a user to leave a team or for a team owner to delete the membership of any other team member. You can also use this endpoint to delete a user membership even if it is not accepted. |
+
+### Health
+
+The Health service is designed to allow you to both validate and monitor that your Appwrite server instance and all of its internal components are up and responsive.
+To know more about Health API, head over this [page](https://appwrite.io/docs/server/health)
+
+| Shortcut                                    | Description                                                                                                                                 |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `health`                                                        | Create a Health object and initialize it.                                                                               |
+| `getHttp`, `getHealth`                                          | Check the Appwrite HTTP server is up and responsive.                                                                    |
+| `getDbHealth`, `getDatabaseHealth`                              | Check the Appwrite database server is up and connection is successful.                                                  |
+| `getCacheHealth`                                                | Check the Appwrite in-memory cache server is up and connection is successful.                                           |
+| `getTime`,`getTimeHealth`                                       | Check the Appwrite server time is synced with Google remote NTP server.                                                 |
+| `getWebhooksQueue`, `getWhQueue`, `getQueueWebhooks`            | Get the number of webhooks that are waiting to be processed in the Appwrite internal queue server.                      |
+| `getLogsQueue`, `getQueueLogs`                                  | Get the number of logs that are waiting to be processed in the Appwrite internal queue server.                          |
+| `getCertificatesQueue`, `getCertsQueue`, `getQueueCertificates` | Get the number of certificates that are waiting to be issued against Letsencrypt in the Appwrite internal queue server. |
+| `getFuncsQueue`, `getFunctionsQueue`, `getQueueFunctions`       | Get the number of function executions that are waiting to be executed.                                                  |
+| `getStorageHealth`, `getStorageLocal`                           | Check the Appwrite local storage device is up and connection is successful.                                             |
+| `getAntivirusHealth`, `getAntivirus`                            | Check the Appwrite Antivirus server is up and connection is successful.                                                 |
 
 ## Known Issues
 

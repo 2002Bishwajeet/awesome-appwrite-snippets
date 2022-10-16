@@ -1,7 +1,7 @@
 {
   "Initialize health": {
     "scope": "php",
-    "prefix": "helath",
+    "prefix": "health",
     "body": ["\\$${1:health} = new Health(${2:\\$client});"],
     "description": "Create a Health object and initialize it."
   },
@@ -37,7 +37,7 @@
   },
   "Get Logs Queue": {
     "scope": "php",
-    "prefix": ["getWebhooksQueue", "getWhQueue", "getQueueLogs"],
+    "prefix": ["getLogsQueue", "getQueueLogs"],
     "body": ["\\$${1:response} = \\$health->getQueueLogs();"],
     "description": "Get the number of logs that are waiting to be processed in the Appwrite internal queue server."
   },
