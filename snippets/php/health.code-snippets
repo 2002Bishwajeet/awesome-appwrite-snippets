@@ -1,0 +1,68 @@
+{
+  "Initialize health": {
+    "scope": "php",
+    "prefix": "health",
+    "body": ["\\$${1:health} = new Health(${2:\\$client});"],
+    "description": "Create a Health object and initialize it."
+  },
+  "Get HTTP": {
+    "scope": "php",
+    "prefix": ["getHttp", "getHealth"],
+    "body": ["\\$${1:response} = \\$health->get();"],
+    "description": "Check the Appwrite HTTP server is up and responsive."
+  },
+  "Get DB": {
+    "scope": "php",
+    "prefix": ["getDbHealth", "getDatabaseHealth"],
+    "body": ["\\$${1:response} = \\$health->getDB();"],
+    "description": "Check the Appwrite database server is up and connection is successful."
+  },
+  "Get Cache": {
+    "scope": "php",
+    "prefix": ["getCacheHealth"],
+    "body": ["\\$${1:response} = \\$health->getCache();"],
+    "description": "Check the Appwrite in-memory cache server is up and connection is successful."
+  },
+  "Get Time": {
+    "scope": "php",
+    "prefix": ["getTime", "getTimeHealth"],
+    "body": ["\\$${1:response} = \\$health->getTime();"],
+    "description": "Check the Appwrite server time is synced with Google remote NTP server."
+  },
+  "Get Webhooks Queue": {
+    "scope": "php",
+    "prefix": ["getWebhooksQueue", "getWhQueue", "getQueueWebhooks"],
+    "body": ["\\$${1:response} = \\$health->getQueueWebhooks();"],
+    "description": "Get the number of webhooks that are waiting to be processed in the Appwrite internal queue server."
+  },
+  "Get Logs Queue": {
+    "scope": "php",
+    "prefix": ["getLogsQueue", "getQueueLogs"],
+    "body": ["\\$${1:response} = \\$health->getQueueLogs();"],
+    "description": "Get the number of logs that are waiting to be processed in the Appwrite internal queue server."
+  },
+  "Get Certificates Queue": {
+    "scope": "php",
+    "prefix": ["getCertificatesQueue", "getCertsQueue", "getQueueCertificates"],
+    "body": ["\\$${1:response} = \\$health->getQueueCertificates();"],
+    "description": "Get the number of certificates that are waiting to be issued against Letsencrypt in the Appwrite internal queue server."
+  },
+  "Get Functions Queue": {
+    "scope": "php",
+    "prefix": ["getFuncsQueue", "getFunctionsQueue", "getQueueFunctions"],
+    "body": ["\\$${1:response} = \\$health->getQueueFunctions();"],
+    "description": "Get the number of function executions that are waiting to be executed."
+  },
+  "Get Local Storage": {
+    "scope": "php",
+    "prefix": ["getStorageHealth", "getStorageLocal"],
+    "body": ["\\$${1:response} = \\$health->getStorageLocal();"],
+    "description": "Check the Appwrite local storage device is up and connection is successful."
+  },
+  "Get Antivirus": {
+    "scope": "php",
+    "prefix": ["getAntivirusHealth", "getAntivirus"],
+    "body": ["\\$${1:response} = \\$health->getAntivirus();"],
+    "description": "Check the Appwrite Antivirus server is up and connection is successful."
+  }
+}
