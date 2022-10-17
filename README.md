@@ -59,7 +59,7 @@ The following tables portrays the snippets of the following Appwrite API in thei
 |   REST APIs   | Dart | Node.js | Swift | Deno | Python | Ruby | PHP | Kotlin |
 | :-----------: | ---- | ------- | ----- | ---- | ------ | ---- | --- | ------ |
 |    Client     | ✅   |         |       |      |        |      |     |        |
-|    Account    |      |         |       |      |        |      |     |        |
+|    Account    | ✅   |         |       |      |        |      |     |        |
 |   Database    |      |         |       |      |        |      |     |        |
 |    Storage    |      |         |       |      |        |      |     |        |
 |     Teams     |      |         |       |      |        |      |     |        |
