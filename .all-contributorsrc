@@ -23,6 +23,16 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "Meldiron",
+      "name": "Matej Bačo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19310830?v=4",
+      "profile": "http://matejbaco.eu",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
