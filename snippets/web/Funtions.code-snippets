@@ -2,7 +2,7 @@
 		"create Execution": {
 			"scope" : "javascript", 
 			"prefix" : "execute", 
-			"body" : ["const promise = funtion.createExecution(`${1:[FUNCTION_ID]}`)"] , 
+			"body" : ["const ${1:response} = await ${2:function}.createExecution(`${3:[FUNCTION_ID]}`)"] , 
 			"description": "Execute code in the background. Default value is false." 
 		},
 	
