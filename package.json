@@ -69,7 +69,12 @@
       {
         "language": "dart",
         "path": "./snippets/flutter/teams.code-snippets"
+      },
+      {
+        "language": "javascript , typescript",
+        "path": "./snippets/web/Funtions.code-snippets"
       }
+
     ]
   },
   "dependencies": {
