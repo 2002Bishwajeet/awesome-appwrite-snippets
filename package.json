@@ -71,8 +71,17 @@
         "path": "./snippets/flutter/teams.code-snippets"
       },
       {
+<<<<<<< HEAD
         "language": "javascript",
         "path": "./snippets/web/Funtions.code-snippets"
+=======
+        "language": "dart",
+        "path": "./snippets/dart/account.code-snippets"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/php/health.code-snippets"
+>>>>>>> 30b591d75b0d981c1db2ade5a70c5f40d2bd06d9
       }
 
     ]
