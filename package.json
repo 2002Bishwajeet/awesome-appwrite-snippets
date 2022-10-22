@@ -73,6 +73,14 @@
       {
         "language": "javascript",
         "path": "./snippets/web/Functions.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./snippets/dart/account.code-snippets"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/php/health.code-snippets"
       }
     ]
   },

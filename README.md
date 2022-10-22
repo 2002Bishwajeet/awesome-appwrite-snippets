@@ -1,6 +1,6 @@
 # Awesome Appwrite Snippets [![Awesome](.github/images/awesome-badge.png)](https://github.com/sindresorhus/awesome)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Awesome Appwrite Snippets is a collection of commonly used Appwrite APIs. It increases your speed of development by eliminating most of the boilerplate code associated with making using Appwrite in your Project.
@@ -27,6 +27,7 @@ Awesome Appwrite Snippets is a collection of commonly used Appwrite APIs. It inc
   - [Databases](#databases)
   - [Storage](#storage)
   - [Teams](#teams)
+  - [Health](#health)
 - [Known Issues](#known-issues)
 - [Contributing](#contributing)
 - [License](#license)
@@ -58,14 +59,14 @@ The following tables portrays the snippets of the following Appwrite API in thei
 |   REST APIs   | Dart | Node.js | Swift | Deno | Python | Ruby | PHP | Kotlin |
 | :-----------: | ---- | ------- | ----- | ---- | ------ | ---- | --- | ------ |
 |    Client     | ✅   |         |       |      |        |      |     |        |
-|    Account    |      |         |       |      |        |      |     |        |
+|    Account    | ✅   |         |       |      |        |      |     |        |
 |   Database    |      |         |       |      |        |      |     |        |
 |    Storage    |      |         |       |      |        |      |     |        |
 |     Teams     |      |         |       |      |        |      |     |        |
 |   Functions   |      |         |       |      |        |      |     |        |
 | Localizations |      |         |       |      |        |      |     |        |
 |    Avatars    |      |         |       |      |        |      |     |        |
-|    Health     |      |         |       |      |        |      |     |        |
+|    Health     |      |         |       |      |        |      | ✅  |        |
 |     Users     |      |         |       |      |        |      |     |        |
 
 These snippets supports for the appwrite version ![Appwrite Version](https://img.shields.io/badge/appwrite-v1.1.0-%23f02e65)
@@ -166,6 +167,25 @@ To know more about Teams API, head over this [page](https://appwrite.io/docs/cli
 | `updateTeamMembershipstatus`                | Use this endpoint to allow a user to accept an invitation to join a team after being redirected back to your app from the invitation email received by the user.                                          |
 | `deleteTeamMembership`, `delTeamMembership` | This endpoint allows a user to leave a team or for a team owner to delete the membership of any other team member. You can also use this endpoint to delete a user membership even if it is not accepted. |
 
+### Health
+
+The Health service is designed to allow you to both validate and monitor that your Appwrite server instance and all of its internal components are up and responsive.
+To know more about Health API, head over this [page](https://appwrite.io/docs/server/health)
+
+| Shortcut                                    | Description                                                                                                                                 |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `health`                                                        | Create a Health object and initialize it.                                                                               |
+| `getHttp`, `getHealth`                                          | Check the Appwrite HTTP server is up and responsive.                                                                    |
+| `getDbHealth`, `getDatabaseHealth`                              | Check the Appwrite database server is up and connection is successful.                                                  |
+| `getCacheHealth`                                                | Check the Appwrite in-memory cache server is up and connection is successful.                                           |
+| `getTime`,`getTimeHealth`                                       | Check the Appwrite server time is synced with Google remote NTP server.                                                 |
+| `getWebhooksQueue`, `getWhQueue`, `getQueueWebhooks`            | Get the number of webhooks that are waiting to be processed in the Appwrite internal queue server.                      |
+| `getLogsQueue`, `getQueueLogs`                                  | Get the number of logs that are waiting to be processed in the Appwrite internal queue server.                          |
+| `getCertificatesQueue`, `getCertsQueue`, `getQueueCertificates` | Get the number of certificates that are waiting to be issued against Letsencrypt in the Appwrite internal queue server. |
+| `getFuncsQueue`, `getFunctionsQueue`, `getQueueFunctions`       | Get the number of function executions that are waiting to be executed.                                                  |
+| `getStorageHealth`, `getStorageLocal`                           | Check the Appwrite local storage device is up and connection is successful.                                             |
+| `getAntivirusHealth`, `getAntivirus`                            | Check the Appwrite Antivirus server is up and connection is successful.                                                 |
+
 ## Known Issues
 
 At this time, there are no known issues. If you discover a bug or would like to see a shortcut added, please create a pull request at our GitHub page.
@@ -194,11 +214,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center"><a href="https://github.com/Nikhil-1503"><img src="https://avatars.githubusercontent.com/u/61755381?v=4?s=100" width="100px;" alt="Nikhil Shanbhag"/><br /><sub><b>Nikhil Shanbhag</b></sub></a><br /><a href="#maintenance-Nikhil-1503" title="Maintenance">🚧</a></td>
       <td align="center"><a href="https://www.linkedin.com/in/pranjal-mishra-3a79b0196/"><img src="https://avatars.githubusercontent.com/u/55613727?v=4?s=100" width="100px;" alt="Pranjal Mishra"/><br /><sub><b>Pranjal Mishra</b></sub></a><br /><a href="#maintenance-Pranjalmishra30" title="Maintenance">🚧</a></td>
+      <td align="center"><a href="https://github.com/Rajat379"><img src="https://avatars.githubusercontent.com/u/51928008?v=4?s=100" width="100px;" alt="Rajat379"/><br /><sub><b>Rajat379</b></sub></a><br /><a href="https://github.com/2002Bishwajeet/awesome-appwrite-snippets/commits?author=Rajat379" title="Code">💻</a></td>
+      <td align="center"><a href="http://matejbaco.eu"><img src="https://avatars.githubusercontent.com/u/19310830?v=4?s=100" width="100px;" alt="Matej Bačo"/><br /><sub><b>Matej Bačo</b></sub></a><br /><a href="https://github.com/2002Bishwajeet/awesome-appwrite-snippets/commits?author=Meldiron" title="Code">💻</a> <a href="https://github.com/2002Bishwajeet/awesome-appwrite-snippets/commits?author=Meldiron" title="Documentation">📖</a></td>
     </tr>
   </tbody>
-  <tfoot>
-    
-  </tfoot>
 </table>
 
 <!-- markdownlint-restore -->
