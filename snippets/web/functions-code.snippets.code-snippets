@@ -1,40 +1,28 @@
 {
-
-	"create Function" :{
-		"scope": "javascript , typescript",
-		"prefix": "createFunc",
-		"body": ["const ${1:response} = await ${2:function}.create(`${3:[FUNCTION_ID]}` , `${4:[name]}`)"] ,
-		"description": "Create a new function."
-	},
-
-	"create Execution": {
+	"Create Execution": {
 		"scope" : "javascript , typescript" , 
 		"prefix" : "execfunc", 
 		"body" : ["const ${1:response} = await ${2:function}.createExecution(`${3:[FUNCTION_ID]}`)"] , 
 		"description": "Trigger a function execution. The returned object will return you the current execution status. " 
 	},
-
 	"List Execution": {
 		"scope" : "javascript , typescript" , 
 		"prefix": "listfunc" , 
 		"body": ["const ${1:response} = await ${2:function}.listExecution(`${3:[FUNCTION_ID]}`)"] ,
 		"description": "Get a list of all the current user function execution logs."
-	} ,
-
+	},
 	"Get Execution" : {
 		"scope" : "javascript , typescript" , 
 		"prefix": "getfunc" , 
 		"body": ["const ${1:response} = await ${2:function}.getExecution(`${3:[FUNCTION_ID]}` , `${4:[EXECUTION_ID]}`)"] ,
 		"description": "Get a function execution log by its unique ID."
-	} ,
-
+	},
 	"Retry Build" : {
 		"scope" : "javascript , typescript" , 
 		"prefix": "retryfunc" , 
 		"body": ["const ${1:response} = await ${2:funtion}.retryBuild(`${3:[FUNCTION_ID]}` , `${4:[DEPLOYMENT_ID]}` , `${5:[BUILD_ID]}`)"] ,
 		"description": "Build unique ID."
 	}
-
 }
 
 
