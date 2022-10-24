@@ -28,6 +28,7 @@ Awesome Appwrite Snippets is a collection of commonly used Appwrite APIs. It inc
   - [Storage](#storage)
   - [Teams](#teams)
   - [Health](#health)
+  - [Functions](#functions)
 - [Known Issues](#known-issues)
 - [Contributing](#contributing)
 - [License](#license)
@@ -192,10 +193,10 @@ The Functions service allows you to create custom behaviour that can be triggere
 
 | Shortcut   | Description                                                                                    |
 |------------|------------------------------------------------------------------------------------------------|
-| `createfunc` | create a new function object and initialize it                                                 |
-| `execfunc`   | trigger a function execution, The returned object will return you the current execution status |
-| `listfunc`   | Get a list of all the current user function execution logs                                     |
-| `getfunc`    | Get a function execution log by its unique ID                                                  |
+| `createfunc` | Create a new function object and initialize it.                                                |
+| `execfunc`   | Trigger a function execution.The returned object will return you the current execution status. |
+| `listfunc`   | Get a list of all the current user function execution logs.                                     |
+| `getfunc`    | Get a function execution log by its unique ID.                                                  |
 
 
 
