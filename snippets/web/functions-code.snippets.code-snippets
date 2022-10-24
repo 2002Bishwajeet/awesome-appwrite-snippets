@@ -2,7 +2,7 @@
 	"Create Function" :{
 		"scope": "javascript , typescript",
 		"prefix": "createfunc",
-		"body": ["const ${1:function} = Function(${2:client})"] ,
+		"body": ["const ${1:function} = new Function(${2:client})"] ,
 		"description": "Create a new Function object and initialize it"
 	},
 	"Create Execution": {
