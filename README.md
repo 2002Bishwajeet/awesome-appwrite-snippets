@@ -189,7 +189,7 @@ To know more about Health API, head over this [page](https://appwrite.io/docs/se
 
 ### Functions
 
-The Functions service allows you to create custom behaviour that can be triggered by any supported Appwrite system events or by a predefined schedule.
+The Functions service allows you to create custom behaviour that can be triggered by any supported Appwrite system events or by a predefined schedule.To know more about Functions API, head over to this [page](https://appwrite.io/docs/client/functions)
 
 | Shortcut   | Description                                                                                    |
 |------------|------------------------------------------------------------------------------------------------|
