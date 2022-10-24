@@ -1,4 +1,10 @@
 {
+	"Create Function" :{
+		"scope": "javascript , typescript",
+		"prefix": "createFunc",
+		"body": ["const ${1:function} = Function(${2:client})"] ,
+		"description": "Create a new Function object and initialize it"
+	},
 	"Create Execution": {
 		"scope" : "javascript , typescript" , 
 		"prefix" : "execfunc", 
@@ -16,12 +22,6 @@
 		"prefix": "getfunc" , 
 		"body": ["const ${1:response} = await ${2:function}.getExecution(`${3:[FUNCTION_ID]}` , `${4:[EXECUTION_ID]}`)"] ,
 		"description": "Get a function execution log by its unique ID."
-	},
-	"Retry Build" : {
-		"scope" : "javascript , typescript" , 
-		"prefix": "retryfunc" , 
-		"body": ["const ${1:response} = await ${2:funtion}.retryBuild(`${3:[FUNCTION_ID]}` , `${4:[DEPLOYMENT_ID]}` , `${5:[BUILD_ID]}`)"] ,
-		"description": "Build unique ID."
 	}
 }
 

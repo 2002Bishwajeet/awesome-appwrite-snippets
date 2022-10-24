@@ -72,7 +72,7 @@
       },
       {
         "language": "javascript",
-        "path": "./snippets/web/Functions.code-snippets"
+        "path": "./snippets/web/functions.code-snippets"
       },
       {
         "language": "dart",
