@@ -67,6 +67,10 @@
         "path": "./snippets/web/storage.code-snippets"
       },
       {
+        "language": "java",
+        "path": "./snippets/android_java/client.code-snippets"
+      },
+      {
         "language": "dart",
         "path": "./snippets/flutter/teams.code-snippets"
       },
