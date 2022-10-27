@@ -47,7 +47,7 @@
       "scope": "dart",
       "prefix": ["sGetSessionId", "sGetSessionbyId"],
       "body": [
-        "final ${1:response} = await account.getSesssion(sessionId: '${1:sessionId}');"
+        "final ${1:response} = await account.getSession(sessionId: '${1:sessionId}');"
       ],
       "description": "Use this endpoint to get a logged in user's session using a Session ID. Inputting 'current' will return the current session being used."
     },
