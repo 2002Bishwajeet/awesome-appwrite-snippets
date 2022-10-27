@@ -1,0 +1,13 @@
+{
+    "Add a Kotlin Client": {
+      "scope": "kotlin",
+      "prefix": "sclient",
+      "body": [
+        "val ${1:client} = Client(context)",
+        "\t.setEndpoint(${2:\"https://localhost/v1\"})",
+        "\t.setProject(${3:\"projectId\"})",
+        "\t.setJWT(${4:\"jwt\"})"
+      ],
+      "description": "Create a Kotlin Client object and initialize it."
+    }
+  }
