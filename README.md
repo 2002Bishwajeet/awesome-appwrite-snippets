@@ -46,7 +46,7 @@ The following tables portrays the snippets of the following Appwrite API in thei
 
 |   REST APIs   | Flutter SDK | Web SDK | Apple SDK | Android SDK (Java) | Android SDK (Kotlin) |
 | :-----------: | ----------- | ------- | --------- | ------------------ | -------------------- |
-|    Client     | ✅          | ✅      |    ✅       |                    |                      |
+|    Client     | ✅          | ✅      |    ✅       |      ✅              |                      |
 |    Account    | ✅          | ✅      |           |                    |                      |
 |   Database    | ✅          | ✅      |           |                    |                      |
 |    Storage    | ✅          | ✅      |           |                    |                      |
