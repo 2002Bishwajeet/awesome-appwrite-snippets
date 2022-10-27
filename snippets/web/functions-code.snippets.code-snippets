@@ -1,0 +1,29 @@
+{
+	"Create Function" :{
+		"scope": "javascript , typescript",
+		"prefix": "createfunc",
+		"body": ["const ${1:function} = new Function(${2:client})"] ,
+		"description": "Create a new Function object and initialize it"
+	},
+	"Create Execution": {
+		"scope" : "javascript , typescript" , 
+		"prefix" : "execfunc", 
+		"body" : ["const ${1:response} = await ${2:function}.createExecution(`${3:[FUNCTION_ID]}`)"] , 
+		"description": "Trigger a function execution. The returned object will return you the current execution status. " 
+	},
+	"List Execution": {
+		"scope" : "javascript , typescript" , 
+		"prefix": "listfunc" , 
+		"body": ["const ${1:response} = await ${2:function}.listExecution(`${3:[FUNCTION_ID]}`)"] ,
+		"description": "Get a list of all the current user function execution logs."
+	},
+	"Get Execution" : {
+		"scope" : "javascript , typescript" , 
+		"prefix": "getfunc" , 
+		"body": ["const ${1:response} = await ${2:function}.getExecution(`${3:[FUNCTION_ID]}` , `${4:[EXECUTION_ID]}`)"] ,
+		"description": "Get a function execution log by its unique ID."
+	}
+}
+
+
+
