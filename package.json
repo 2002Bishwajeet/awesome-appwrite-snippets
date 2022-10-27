@@ -71,6 +71,10 @@
         "path": "./snippets/flutter/teams.code-snippets"
       },
       {
+        "language": "javascript",
+        "path": "./snippets/web/functions.code-snippets"
+      },
+      {
         "language": "dart",
         "path": "./snippets/dart/account.code-snippets"
       },
@@ -81,6 +85,14 @@
       {
         "language": "php",
         "path": "./snippets/php/health.code-snippets"
+      },
+      {
+        "language": "kotlin",
+        "path": "./snippets/kotlin/client.code-snippets"
+      },
+      {
+        "language": "kotlin",
+        "path": "./snippets/kotlin/account.code-snippets"
       }
     ]
   },
