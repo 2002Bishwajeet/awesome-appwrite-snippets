@@ -28,6 +28,7 @@ Awesome Appwrite Snippets is a collection of commonly used Appwrite APIs. It inc
   - [Storage](#storage)
   - [Teams](#teams)
   - [Health](#health)
+  - [Functions](#functions)
 - [Known Issues](#known-issues)
 - [Contributing](#contributing)
 - [License](#license)
@@ -50,7 +51,7 @@ The following tables portrays the snippets of the following Appwrite API in thei
 |   Database    | ✅          | ✅      |           |                    |                      |
 |    Storage    | ✅          | ✅      |           |                    |                      |
 |     Teams     | ✅          | ✅      |           |                    |                      |
-|   Functions   |             |         |           |                    |                      |
+|   Functions   |             | ✅      |           |                    |                      |
 | Localizations |             |         |           |                    |                      |
 |    Avatars    |             |         |           |                    |                      |
 
@@ -185,6 +186,19 @@ To know more about Health API, head over this [page](https://appwrite.io/docs/se
 | `getFuncsQueue`, `getFunctionsQueue`, `getQueueFunctions`       | Get the number of function executions that are waiting to be executed.                                                  |
 | `getStorageHealth`, `getStorageLocal`                           | Check the Appwrite local storage device is up and connection is successful.                                             |
 | `getAntivirusHealth`, `getAntivirus`                            | Check the Appwrite Antivirus server is up and connection is successful.                                                 |
+
+### Functions
+
+The Functions service allows you to create custom behaviour that can be triggered by any supported Appwrite system events or by a predefined schedule.To know more about Functions API, head over to this [page](https://appwrite.io/docs/client/functions)
+
+| Shortcut   | Description                                                                                    |
+|------------|------------------------------------------------------------------------------------------------|
+| `createfunc` | Create a new function object and initialize it.                                                |
+| `execfunc`   | Trigger a function execution.The returned object will return you the current execution status. |
+| `listfunc`   | Get a list of all the current user function execution logs.                                     |
+| `getfunc`    | Get a function execution log by its unique ID.                                                  |
+
+
 
 ## Known Issues
 

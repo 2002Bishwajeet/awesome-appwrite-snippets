@@ -71,6 +71,10 @@
         "path": "./snippets/flutter/teams.code-snippets"
       },
       {
+        "language": "javascript",
+        "path": "./snippets/web/functions.code-snippets"
+      },
+      {
         "language": "dart",
         "path": "./snippets/dart/account.code-snippets"
       },
