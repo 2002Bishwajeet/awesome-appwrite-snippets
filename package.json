@@ -81,6 +81,10 @@
       {
         "language": "kotlin",
         "path": "./snippets/kotlin/client.code-snippets"
+      },
+      {
+        "language": "kotlin",
+        "path": "./snippets/kotlin/account.code-snippets"
       }
     ]
   },
