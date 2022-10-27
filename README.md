@@ -1,6 +1,6 @@
 # Awesome Appwrite Snippets [![Awesome](.github/images/awesome-badge.png)](https://github.com/sindresorhus/awesome)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Awesome Appwrite Snippets is a collection of commonly used Appwrite APIs. It increases your speed of development by eliminating most of the boilerplate code associated with making using Appwrite in your Project.
@@ -232,6 +232,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="http://matejbaco.eu"><img src="https://avatars.githubusercontent.com/u/19310830?v=4?s=100" width="100px;" alt="Matej Bačo"/><br /><sub><b>Matej Bačo</b></sub></a><br /><a href="https://github.com/2002Bishwajeet/awesome-appwrite-snippets/commits?author=Meldiron" title="Code">💻</a> <a href="https://github.com/2002Bishwajeet/awesome-appwrite-snippets/commits?author=Meldiron" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/RJ025"><img src="https://avatars.githubusercontent.com/u/93763090?v=4?s=100" width="100px;" alt="RITIK JAIN"/><br /><sub><b>RITIK JAIN</b></sub></a><br /><a href="https://github.com/2002Bishwajeet/awesome-appwrite-snippets/commits?author=RJ025" title="Code">💻</a> <a href="https://github.com/2002Bishwajeet/awesome-appwrite-snippets/commits?author=RJ025" title="Documentation">📖</a></td>
       <td align="center"><a href="https://oberai.dev"><img src="https://avatars.githubusercontent.com/u/31401437?v=4?s=100" width="100px;" alt="Aditya Oberai"/><br /><sub><b>Aditya Oberai</b></sub></a><br /><a href="https://github.com/2002Bishwajeet/awesome-appwrite-snippets/commits?author=adityaoberai" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/GunjanGupta26"><img src="https://avatars.githubusercontent.com/u/89540928?v=4?s=100" width="100px;" alt="Gunjan Gupta"/><br /><sub><b>Gunjan Gupta</b></sub></a><br /><a href="https://github.com/2002Bishwajeet/awesome-appwrite-snippets/commits?author=GunjanGupta26" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
