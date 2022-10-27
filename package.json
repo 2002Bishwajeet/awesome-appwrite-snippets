@@ -79,6 +79,10 @@
         "path": "./snippets/dart/account.code-snippets"
       },
       {
+        "language": "swift",
+        "path": "./snippets/apple/client.code-snippets"
+      },
+      {
         "language": "php",
         "path": "./snippets/php/health.code-snippets"
       },
