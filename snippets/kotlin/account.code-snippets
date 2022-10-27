@@ -86,7 +86,7 @@
       "prefix": ["sUpdatePhone", "sUpPhone"],
       "body": [
         "val ${1:response} = account.updatePhone(",
-        "   phone = \"${2:}\",",
+        "   phone = \"${2:phone}\",",
         "   password = \"${3:password}\"",
         ")"
       ],
