@@ -1,0 +1,12 @@
+{
+    "Add a Client": {
+      "scope": "java",
+      "prefix": "client",
+      "body": [
+        "Client ${1:client} = Client(getApplicationContext())",
+        "\t.setEndpoint(${2:https:/appwrite.io/v1})",
+        "\t.setProject(${3:project_id})",
+      ],
+      "description": "Create a Client object and initialize it."
+    }
+  }
