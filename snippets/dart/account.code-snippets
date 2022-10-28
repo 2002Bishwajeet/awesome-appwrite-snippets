@@ -47,7 +47,7 @@
       "scope": "dart",
       "prefix": ["sGetSessionId", "sGetSessionbyId"],
       "body": [
-        "final ${1:response} = await account.getSesssion(sessionId: '${1:sessionId}');"
+        "final ${1:response} = await account.getSession(sessionId: '${2:sessionId}');"
       ],
       "description": "Use this endpoint to get a logged in user's session using a Session ID. Inputting 'current' will return the current session being used."
     },
@@ -153,4 +153,3 @@
       "description": "Use this endpoint to complete the user phone verification process. Use the userId and secret that were sent to your user's phone number to verify the user email ownership. If confirmed this route will return a 200 status code."
     }
   }
-  
