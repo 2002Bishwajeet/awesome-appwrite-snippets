@@ -7,8 +7,9 @@
     ],
     "description": "Create a Health object and initialize it."
   },
+  
   "Get HTTP": {
-    "scope": "php",
+    "scope": "kotlin",
     "prefix": ["getHttp", "getHealth"],
     "body": [
       "val ${1:response} = health.get()",
@@ -16,8 +17,9 @@
     ],
     "description": "Check the Appwrite HTTP server is up and responsive."
   },
+  
   "Get DB": {
-    "scope": "php",
+    "scope": "kotlin",
     "prefix": ["getDbHealth", "getDatabaseHealth"],
     "body": [
       "val ${1:response} = health.getDB()",
@@ -25,8 +27,9 @@
     ],
     "description": "Check the Appwrite database server is up and connection is successful."
   },
+  
   "Get Cache": {
-    "scope": "php",
+    "scope": "kotlin",
     "prefix": ["getCacheHealth"],
     "body": [
       "val ${1:response} = health.getCache()",
@@ -34,8 +37,9 @@
     ],
     "description": "Check the Appwrite in-memory cache server is up and connection is successful."
   },
+  
   "Get Time": {
-    "scope": "php",
+    "scope": "kotlin",
     "prefix": ["getTime", "getTimeHealth"],
     "body": [
       "val ${1:response} = health.getTime()",
@@ -43,8 +47,9 @@
     ],
     "description": "Check the Appwrite server time is synced with Google remote NTP server."
   },
+  
   "Get Webhooks Queue": {
-    "scope": "php",
+    "scope": "kotlin",
     "prefix": ["getWebhooksQueue", "getWhQueue", "getQueueWebhooks"],
     "body": [
       "val ${1:response} = health.getQueueWebhooks()",
@@ -52,8 +57,9 @@
     ],
     "description": "Get the number of webhooks that are waiting to be processed in the Appwrite internal queue server."
   },
+  
   "Get Logs Queue": {
-    "scope": "php",
+    "scope": "kotlin",
     "prefix": ["getLogsQueue", "getQueueLogs"],
     "body": [
       "val ${1:response} = health.getQueueLogs()",
@@ -61,8 +67,9 @@
     ],
     "description": "Get the number of logs that are waiting to be processed in the Appwrite internal queue server."
   },
+  
   "Get Certificates Queue": {
-    "scope": "php",
+    "scope": "kotlin",
     "prefix": ["getCertificatesQueue", "getCertsQueue", "getQueueCertificates"],
     "body": [
       "val ${1:response} = health.getQueueCertificates()",
@@ -70,8 +77,9 @@
     ],
     "description": "Get the number of certificates that are waiting to be issued against Letsencrypt in the Appwrite internal queue server."
   },
+  
   "Get Functions Queue": {
-    "scope": "php",
+    "scope": "kotlin",
     "prefix": ["getFuncsQueue", "getFunctionsQueue", "getQueueFunctions"],
     "body": [
       "val ${1:response} = health.getQueueFunctions()",
@@ -79,8 +87,9 @@
     ],
     "description": "Get the number of function executions that are waiting to be executed."
   },
+  
   "Get Local Storage": {
-    "scope": "php",
+    "scope": "kotlin",
     "prefix": ["getStorageHealth", "getStorageLocal"],
     "body": [
       "val ${1:response} = health.getStorageLocal()",
@@ -88,8 +97,9 @@
     ],
     "description": "Check the Appwrite local storage device is up and connection is successful."
   },
+  
   "Get Antivirus": {
-    "scope": "php",
+    "scope": "kotlin",
     "prefix": ["getAntivirusHealth", "getAntivirus"],
     "body": [
       "val ${1:response} = health.getAntivirus()",
