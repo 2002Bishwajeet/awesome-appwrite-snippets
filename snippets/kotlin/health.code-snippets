@@ -1,6 +1,6 @@
 {
   "Initialize health": {
-    "scope": "php",
+    "scope": "kotlin",
     "prefix": "health",
     "body": [
       "val health = Health(client)"
