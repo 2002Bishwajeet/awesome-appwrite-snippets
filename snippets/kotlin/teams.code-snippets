@@ -1,0 +1,136 @@
+{
+  "Initialize Team": {
+    "scope": "kotlin",
+    "prefix": ["team"],
+    "body": ["val teams = Teams(client)"],
+    "description": "Create a Team object and initialize it."
+  },
+
+  "Create Team": {
+    "scope": "kotlin",
+    "prefix": ["createTeam", "crTeam"],
+    "body": [
+      "val ${1:response} = teams.create(",
+      " teamId = \"${2:teamId}\",",
+      " name: \"${3:name}\"",
+      ")"
+    ],
+    "description": "Create a new Team."
+  },
+
+  "List Teams": {
+    "scope": "kotlin",
+    "prefix": ["listTeams", "listTeams"],
+    "body": ["val ${1:response} = teams.list()"],
+    "description": "Get a list of all the user teams. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's teams."
+  },
+
+  "Get Team": {
+    "scope": "kotlin",
+    "prefix": "getTeam",
+    "body": [
+      "val ${1:response} = teams.get(",
+      " teamId = \"${2:teamId}\"",
+      ")"
+    ],
+    "description": "Get a team by its unique ID."
+  },
+
+  "Update Team": {
+    "scope": "kotlin",
+    "prefix": ["updateTeam", "upTeam"],
+    "body": [
+      "val ${1:response} = teams.update(",
+      " teamId = \"${2:teamId}\",",
+      " name = \"${3:name}\"",
+      ")"
+    ],
+    "description": "Update a team by its unique ID."
+  },
+
+  "Delete Team": {
+    "scope": "kotlin",
+    "prefix": ["deleteTeam", "delTeam"],
+    "body": [
+      "val ${1:response} = teams.delete(",
+      " teamId: \"${2:teamId}\"",
+      ")"
+    ],
+    "description": "Delete a team by its unique ID."
+  },
+
+  "Create Team Membership": {
+    "scope": "kotlin",
+    "prefix": ["createTeamMembership", "crTeamMembership"],
+    "body": [
+      "val ${1:response} = teams.createMembership(",
+      " teamId = \"${2:teamId}\",",
+      " email = \"${3:email}\",",
+      " roles = listof($4),",
+      " url = \"${5:url}\"",
+      ")"
+    ],
+    "description": "Create a new Team Membership."
+  },
+
+  "List Team Memberships": {
+    "scope": "kotlin",
+    "prefix": ["listTeamMemberships", "listMemberships"],
+    "body": [
+      "val ${1:response} = teams.listMemberships(",
+      " teamId = \"${2:teamId}\"",
+      ")"
+    ],
+    "description": "Use this endpoint to list a team's members using the team's ID. All team members have read access to this endpoint."
+  },
+
+  "Get Team Membership": {
+    "scope": "kotlin",
+    "prefix": ["getTeamMembership", "gtmembership"],
+    "body": [
+      "val ${1:response} = teams.getMembership(",
+      " teamId = \"${2:teamId}\"",
+      ")"
+    ],
+    "description": "Get a team membership by its unique ID. All team members have read access for this resource."
+  },
+
+  "Update Team Membership Roles": {
+    "scope": "kotlin",
+    "prefix": ["updateTeamMembershiproles"],
+    "body": [
+      "val ${1:response} = teams.updateMembershipRoles(",
+      " teamId = \"${2:teamId}\",",
+      " membershipId = \"${3:membershipId}\",",
+      " roles = listOf($4)",
+      ")"
+    ],
+    "description": "Modify the roles of a team member. Only team members with the owner role have access to this endpoint."
+  },
+
+  "Update Team Membership status": {
+    "scope": "kotlin",
+    "prefix": ["updateTeamMembershipstatus"],
+    "body": [
+      "val ${1:response} = teams.updateMembershipStatus(",
+      " teamId = \"${2:teamId}\",",
+      " membershipId = \"${3:membershipId}\",",
+      " userId = \"${4:userId}\",",
+      " secret = \"${5:secret}\"",
+      ")"
+    ],
+    "description": "Use this endpoint to allow a user to accept an invitation to join a team after being redirected back to your app from the invitation email received by the user."
+  },
+
+  "Delete Team Membership": {
+    "scope": "kotlin",
+    "prefix": ["deleteTeamMembership", "deleteTeamMembership"],
+    "body": [
+      "val {1:response} = teams.deleteMembership(",
+      " teamId = \"${2:teamId}\",",
+      " membershipId = \"${3:membershipId}\"",
+      ")"
+    ],
+    "description": "This endpoint allows a user to leave a team or for a team owner to delete the membership of any other team member. You can also use this endpoint to delete a user membership even if it is not accepted."
+  }
+}
