@@ -1,0 +1,110 @@
+{
+  "Initialize health": {
+    "scope": "kotlin",
+    "prefix": "health",
+    "body": [
+      "val health = Health(client)"
+    ],
+    "description": "Create a Health object and initialize it."
+  },
+  
+  "Get HTTP": {
+    "scope": "kotlin",
+    "prefix": ["getHttp", "getHealth"],
+    "body": [
+      "val ${1:response} = health.get()",
+      "val ${2:json} = ${1:response}.body?.string()"
+    ],
+    "description": "Check the Appwrite HTTP server is up and responsive."
+  },
+  
+  "Get DB": {
+    "scope": "kotlin",
+    "prefix": ["getDbHealth", "getDatabaseHealth"],
+    "body": [
+      "val ${1:response} = health.getDB()",
+      "val ${2:json} = ${1:response}.body?.string()"
+    ],
+    "description": "Check the Appwrite database server is up and connection is successful."
+  },
+  
+  "Get Cache": {
+    "scope": "kotlin",
+    "prefix": ["getCacheHealth"],
+    "body": [
+      "val ${1:response} = health.getCache()",
+      "val ${2:json} = ${1:response}.body?.string()"
+    ],
+    "description": "Check the Appwrite in-memory cache server is up and connection is successful."
+  },
+  
+  "Get Time": {
+    "scope": "kotlin",
+    "prefix": ["getTime", "getTimeHealth"],
+    "body": [
+      "val ${1:response} = health.getTime()",
+      "val ${2:json} = ${1:response}.body?.string()"
+    ],
+    "description": "Check the Appwrite server time is synced with Google remote NTP server."
+  },
+  
+  "Get Webhooks Queue": {
+    "scope": "kotlin",
+    "prefix": ["getWebhooksQueue", "getWhQueue", "getQueueWebhooks"],
+    "body": [
+      "val ${1:response} = health.getQueueWebhooks()",
+      "val ${2:json} = ${1:response}.body?.string()"
+    ],
+    "description": "Get the number of webhooks that are waiting to be processed in the Appwrite internal queue server."
+  },
+  
+  "Get Logs Queue": {
+    "scope": "kotlin",
+    "prefix": ["getLogsQueue", "getQueueLogs"],
+    "body": [
+      "val ${1:response} = health.getQueueLogs()",
+      "val ${2:json} = ${1:response}.body?.string()"
+    ],
+    "description": "Get the number of logs that are waiting to be processed in the Appwrite internal queue server."
+  },
+  
+  "Get Certificates Queue": {
+    "scope": "kotlin",
+    "prefix": ["getCertificatesQueue", "getCertsQueue", "getQueueCertificates"],
+    "body": [
+      "val ${1:response} = health.getQueueCertificates()",
+      "val ${2:json} = ${1:response}.body?.string()"
+    ],
+    "description": "Get the number of certificates that are waiting to be issued against Letsencrypt in the Appwrite internal queue server."
+  },
+  
+  "Get Functions Queue": {
+    "scope": "kotlin",
+    "prefix": ["getFuncsQueue", "getFunctionsQueue", "getQueueFunctions"],
+    "body": [
+      "val ${1:response} = health.getQueueFunctions()",
+      "val ${2:json} = ${1:response}.body?.string()"
+    ],
+    "description": "Get the number of function executions that are waiting to be executed."
+  },
+  
+  "Get Local Storage": {
+    "scope": "kotlin",
+    "prefix": ["getStorageHealth", "getStorageLocal"],
+    "body": [
+      "val ${1:response} = health.getStorageLocal()",
+      "val ${2:json} = ${1:response}.body?.string()"
+    ],
+    "description": "Check the Appwrite local storage device is up and connection is successful."
+  },
+  
+  "Get Antivirus": {
+    "scope": "kotlin",
+    "prefix": ["getAntivirusHealth", "getAntivirus"],
+    "body": [
+      "val ${1:response} = health.getAntivirus()",
+      "val ${2:json} = ${1:response}.body?.string()"
+    ],
+    "description": "Check the Appwrite Antivirus server is up and connection is successful."
+  }
+}

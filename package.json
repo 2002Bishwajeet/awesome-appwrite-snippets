@@ -97,6 +97,14 @@
       {
         "language": "kotlin",
         "path": "./snippets/kotlin/account.code-snippets"
+      },
+      {
+        "language": "kotlin",
+        "path": "./snippets/kotlin/teams.code-snippets"
+      },
+      {
+        "language": "kotlin",
+        "path": "./snippets/kotlin/health.code-snippets"
       }
     ]
   },
