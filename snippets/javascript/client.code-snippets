@@ -1,12 +1,13 @@
 {
   "Add a Client": {
-    "scope": "javascript",
-    "prefix": "client",
+    "scope": "javascript, typescript",
+    "prefix": "sclient",
     "body": [
       "const ${1:client} = new Client();",
       "${1:client}",
       "\t.setEndpoint('${2:endpoint}')",
-      "\t.setProject('${3:projectid}')"
+      "\t.setProject('${3:projectid}')",
+      "\t.setJWT('${4:jwt}');"
     ],
     "description": "Create a  Client object and initialize it."
   }
