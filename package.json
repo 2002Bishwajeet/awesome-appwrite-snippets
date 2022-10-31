@@ -43,6 +43,10 @@
         "path": "./snippets/web/client.code-snippets"
       },
       {
+        "language": "javascript",
+        "path": "./snippets/javascript/client.code-snippets"
+      },
+      {
         "language": "dart",
         "path": "./snippets/flutter/account.code-snippets"
       },
