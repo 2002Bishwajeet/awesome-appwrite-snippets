@@ -8,6 +8,21 @@ All notable changes to the "awesome-appwrite-snippets" extension will be documen
 
 - Initial release -->
 
+## [0.3.0] - 2022-10-06
+## What's Changed
+* Added GitHub issue forms by @Nikhil-1503 in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/13
+* Pull Request template by @Pranjalmishra30 in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/14
+* docs: add Nikhil-1503 as a contributor for maintenance by @allcontributors in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/15
+* docs: add Pranjalmishra30 as a contributor for maintenance by @allcontributors in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/16
+* Fix: broken snippets flutter by @2002Bishwajeet in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/17
+
+## New Contributors
+* @Nikhil-1503 made their first contribution in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/13
+* @Pranjalmishra30 made their first contribution in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/14
+* @allcontributors made their first contribution in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/15
+
+**Full Changelog**: https://github.com/2002Bishwajeet/awesome-appwrite-snippets/compare/v0.2.0...v0.3.0
+
 ## [0.2.0] - 2022-09-29
 ## What's Changed
 * [ImgBot] Optimize images by @imgbot in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/5
