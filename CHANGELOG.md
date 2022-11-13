@@ -8,6 +8,28 @@ All notable changes to the "awesome-appwrite-snippets" extension will be documen
 
 - Initial release -->
 
+## [0.10.0] - 2022-11-13
+## What's Changed
+* Feat: Add account snippet of Dart by @Rajat379 in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/19
+* Feat: PHP HealthAPI snippets by @Meldiron in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/18
+* Feat functions api javascript lang snippet by @RJ025 in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/25
+* Feat: Add Client and Account API Snippets for Kotlin Serverside by @adityaoberai in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/29
+* Feat apple client snippets by @GunjanGupta26 in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/26
+* feat:Android (Java) Client Snippets by @GunjanGupta26 in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/27
+* Fix: Correct Dart Get Session By ID snippet by @adityaoberai in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/28
+* Fix: Correct Flutter Teams API snippets by @adityaoberai in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/33
+* Feat: Add Kotlin Team and Heath API snippets by @adityaoberai in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/34
+* feat: NodeJS client snippets by @2002Bishwajeet in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/36
+
+## New Contributors
+* @Rajat379 made their first contribution in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/19
+* @Meldiron made their first contribution in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/18
+* @RJ025 made their first contribution in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/25
+* @adityaoberai made their first contribution in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/29
+* @GunjanGupta26 made their first contribution in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/26
+
+**Full Changelog**: https://github.com/2002Bishwajeet/awesome-appwrite-snippets/compare/v0.3.0...v.0.10.0
+
 ## [0.3.0] - 2022-10-06
 ## What's Changed
 * Added GitHub issue forms by @Nikhil-1503 in https://github.com/2002Bishwajeet/awesome-appwrite-snippets/pull/13
